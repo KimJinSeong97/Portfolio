@@ -2,104 +2,91 @@
 
 @import "reset";
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
-
-
-@mixin eng_font1 {
-    font-family: 'Montserrat', sans-serif;
+@font-face {
+    font-family: 'HBIOS-SYS';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2207-01@1.0/HBIOS-SYS.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
 }
 
-nav {
-    width: 100px;
-    height: 100%;
-    background-color: #fed43a;
+body {
+    background-color: #000;
+}
+
+h2 {
+    font-size: 60px;
+    white-space: nowrap;
     position: fixed;
+    top: 35%;
+    left: 35%;
+    transform: translate(-35%, -35%);
+    color: #000;
+    font-family: 'HBIOS-SYS';
+}
 
-    ul {
-        width: 100px;
-        height: 850px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        text-align: center;
+h2::before {
+    content: "KIM JIN SEONG.";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    overflow: hidden;
+    animation: typing_event1 3s steps(24);
+    font-family: 'HBIOS-SYS';
+}
 
-        li {
-            transform: rotate(270deg);
+h3 {
+    font-size: 90px;
+    white-space: nowrap;
+    position: fixed;
+    top: 60%;
+    left: 60%;
+    transform: translate(-60%, -60%);
+    color: #000;
+    font-family: 'HBIOS-SYS';
+}
 
-            a {
-                font-size: 18px;
-                @include eng_font1;
-            }
-        }
+h3::before {
+    content: "FRONTEND.";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    overflow: hidden;
+    animation: typing_event2 4.5s steps(18);
+    font-family: 'HBIOS-SYS';
+}
+
+@keyframes typing_event1 {
+    0% {
+        width: 0%;
+    }
+
+    50% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+        border-right: 1px solid #fff;
     }
 }
 
-#intro {
-    position: relative;
-    left: 100px;
-    width: 94.8%;
-    height: 48.8vw;
-
-    .left {
-        position: absolute;
-        left: 0;
-        width: 50%;
-        height: 100%;
-        background-color: #000;
-
-        .hello {
-            margin: 144px 0px 0px 72px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            h2 {
-                font-size: 48px;
-                color: #000;
-                -webkit-text-stroke: 1px #fff;
-                -webkit-text-stroke-width: 1px;
-                -webkit-text-stroke-color: #fff;
-                padding: 12px 0px 12px 0px;
-            }
-
-            h3 {
-                font-size: 72px;
-                color: #fff;
-
-                span{
-                    font-size: 48px;
-                color: #000;
-                -webkit-text-stroke: 1px #fff;
-                -webkit-text-stroke-width: 1px;
-                -webkit-text-stroke-color: #fff;
-                }
-            }
-
-            p{
-                width: 40%;
-                margin-top: 5%;
-                font-size: 24px;
-                color: #fff;
-            }
-
-            button{
-                padding: 24px 52px;
-                color: #000;
-                font-size: 20px;
-                font-weight: 600;
-                border: none;
-                background-color: #fed43a;
-                margin-top: 62px;
-            }
-        }
-
-
+@keyframes typing_event2 {
+    0% {
+        width: 0%;
     }
 
-    .right {
-        position: absolute;
-        right: 0;
-        width: 50%;
-        background-color: #fed43a;
+    75% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+        border-right: 1px solid #fff;
     }
 }

@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  width: 100px;
+  height: 100%;
+  background-color: #fed43a;
+  position: fixed;
+}
+nav ul {
+  width: 100px;
+  height: 850px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+nav ul li {
+  transform: rotate(270deg);
+}
+nav ul li a {
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+}
+
+#intro {
+  position: relative;
+  left: 100px;
+  width: 94.8%;
+  height: 48.8vw;
+}
+#intro .left {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #000;
+}
+#intro .left .hello {
+  margin: 144px 0px 0px 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#intro .left .hello h2 {
+  font-size: 48px;
+  color: #000;
+  -webkit-text-stroke: 1px #fff;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
+  padding: 12px 0px 12px 0px;
+}
+#intro .left .hello h3 {
+  font-size: 72px;
+  color: #fff;
+}
+#intro .left .hello h3 span {
+  font-size: 48px;
+  color: #000;
+  -webkit-text-stroke: 1px #fff;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
+}
+#intro .left .hello p {
+  width: 40%;
+  margin-top: 5%;
+  font-size: 24px;
+  color: #fff;
+}
+#intro .left .hello button {
+  padding: 24px 52px;
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  background-color: #fed43a;
+  margin-top: 62px;
+}
+#intro .right {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  background-color: #fed43a;
+}

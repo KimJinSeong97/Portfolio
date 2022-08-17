@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+@import "reset";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+
+@mixin eng_font1 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+    width: 100px;
+    height: 100%;
+    background-color: #fed43a;
+    position: fixed;
+
+    ul {
+        width: 100px;
+        height: 850px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+
+        li {
+            transform: rotate(270deg);
+
+            a {
+                font-size: 18px;
+                @include eng_font1;
+            }
+        }
+    }
+}
+
+#intro {
+    position: relative;
+    left: 100px;
+    width: 94.8%;
+    height: 48.8vw;
+
+    .left {
+        position: absolute;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background-color: #000;
+
+        .hello {
+            margin: 144px 0px 0px 72px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            h2 {
+                font-size: 48px;
+                color: #000;
+                -webkit-text-stroke: 1px #fff;
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: #fff;
+                padding: 12px 0px 12px 0px;
+            }
+
+            h3 {
+                font-size: 72px;
+                color: #fff;
+
+                span{
+                    font-size: 48px;
+                color: #000;
+                -webkit-text-stroke: 1px #fff;
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: #fff;
+                }
+            }
+
+            p{
+                width: 40%;
+                margin-top: 5%;
+                font-size: 24px;
+                color: #fff;
+            }
+
+            button{
+                padding: 24px 52px;
+                color: #000;
+                font-size: 20px;
+                font-weight: 600;
+                border: none;
+                background-color: #fed43a;
+                margin-top: 62px;
+            }
+        }
+
+
+    }
+
+    .right {
+        position: absolute;
+        right: 0;
+        width: 50%;
+        background-color: #fed43a;
+    }
+}

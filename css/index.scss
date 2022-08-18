@@ -9,84 +9,292 @@
     font-style: normal;
 }
 
-body {
+@mixin intro_font {
+    font-size: 24px;
+    white-space: pre;
+    position: relative;
+    top: 0;
+    left: 0;
+    color: #000;
+    font-family: 'HBIOS-SYS';
+    margin: 0 1% 1% 1%;
+}
+
+@mixin intro_font_before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #FFFFBD;
+    overflow: hidden;
+    font-family: 'HBIOS-SYS';
+    opacity: 0;
+}
+
+#intro {
+    width: 100%;
+    height: 48.78vw;
     background-color: #000;
-}
+    background-image: url(../img/pixel_stars.jpg);
+    background-size: cover;
 
-h2 {
-    font-size: 60px;
-    white-space: nowrap;
-    position: fixed;
-    top: 35%;
-    left: 35%;
-    transform: translate(-35%, -35%);
-    color: #000;
-    font-family: 'HBIOS-SYS';
-}
-
-h2::before {
-    content: "KIM JIN SEONG.";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: #fff;
-    overflow: hidden;
-    animation: typing_event1 3s steps(24);
-    font-family: 'HBIOS-SYS';
-}
-
-h3 {
-    font-size: 90px;
-    white-space: nowrap;
-    position: fixed;
-    top: 60%;
-    left: 60%;
-    transform: translate(-60%, -60%);
-    color: #000;
-    font-family: 'HBIOS-SYS';
-}
-
-h3::before {
-    content: "FRONTEND.";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: #fff;
-    overflow: hidden;
-    animation: typing_event2 4.5s steps(18);
-    font-family: 'HBIOS-SYS';
-}
-
-@keyframes typing_event1 {
-    0% {
-        width: 0%;
+    .title,
+    .intro1,
+    .intro2,
+    .intro3 {
+        @include intro_font;
     }
 
-    50% {
-        width: 0%;
+    .title::before {
+        @include intro_font_before;
+        content: "<title>김진성_포트폴리오</title>";
+        animation: intro_typing 3s steps(60);
+        animation-fill-mode: forwards;
     }
 
-    100% {
+    .intro1::before {
+        @include intro_font_before;
+        content: "<h2>안녕하세요! 프론트엔드를 희망하는 김진성입니다.</h2>";
+        animation: intro_typing 3s steps(60);
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    .intro2::before {
+        @include intro_font_before;
+        content: '<p>저의 정보와 작업물들은 아래로 스크롤하셔서 확인 하실 수 있습니다.<br>';
+        animation: intro_typing 3s steps(60);
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+    }
+
+    .intro3::before {
+        @include intro_font_before;
+        content: '방문해주셔서 감사합니다!</p>';
+        animation: intro_typing 3s steps(60);
+        animation-delay: 3s;
+        animation-fill-mode: forwards;
+    }
+
+    h2 {
+        font-size: 60px;
+        white-space: nowrap;
+        position: fixed;
+        top: 45%;
+        left: 45%;
+        transform: translate(-45%, -45%);
+        color: #000;
+        font-family: 'HBIOS-SYS';
+    }
+
+    h2::before {
+        content: "KIM JIN SEONG";
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        border-right: 1px solid #fff;
+        height: 100%;
+        color: #fff;
+        overflow: hidden;
+        animation: typing_event1 6s steps(24);
+        font-family: 'HBIOS-SYS';
+        text-shadow: 6px 4px 2px gray;
+    }
+
+    h3 {
+        font-size: 90px;
+        white-space: nowrap;
+        position: fixed;
+        top: 55%;
+        left: 55%;
+        transform: translate(-55%, -55%);
+        color: #000;
+        font-family: 'HBIOS-SYS';
+    }
+
+    h3::before {
+        content: "FRONTEND";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        overflow: hidden;
+        animation: typing_event2 7.5s steps(18);
+        font-family: 'HBIOS-SYS';
+        text-shadow: 6px 4px 2px gray;
+    }
+
+    @keyframes intro_typing {
+        0% {
+            width: 0%;
+            opacity: 1;
+        }
+
+        50% {
+            width: 50%;
+
+        }
+
+        100% {
+            width: 100%;
+            opacity: 1;
+        }
+    }
+
+    @keyframes typing_event1 {
+        0% {
+            width: 0%;
+        }
+
+        70% {
+            width: 0%;
+        }
+
+        100% {
+            width: 100%;
+            border-right: 1px solid #fff;
+        }
+    }
+
+    @keyframes typing_event2 {
+        0% {
+            width: 0%;
+        }
+
+        85% {
+            width: 0%;
+        }
+
+        100% {
+            width: 100%;
+            border-right: 1px solid #fff;
+        }
+    }
+
+    nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 9999;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    nav .menu {
+        position: fixed;
+        padding: 14px 0px;
+        height: 52px;
+        width: 80px;
+        top: 37.5px;
+        right: 152.5px;
+        border-radius: 50%;
+        z-index: 999;
+        cursor: pointer;
+        background: #FFFFBD;
+        transition: all 300ms ease;
+    }
+
+    nav .menu:hover {
+        transform: scale(1.2);
+    }
+
+    nav .menu:active {
+        transform: scale(.9);
+    }
+
+    nav .circle {
+        opacity: 1;
+        font-size: 20px;
+        color: #eee;
+        position: fixed;
+        top: -147.5px;
+        right: -27.5px;
+        display: block;
+        height: 400px;
+        width: 400px;
+        background: #FFFFBD;
+        padding: 20px;
+        transition: all 300ms ease;
+        border-radius: 50%;
+        overflow: hidden !important;
+    }
+
+    nav .circle li {
+        list-style: none !important;
+        background: rgba(0, 0, 0, 0);
+    }
+
+    nav .circle li a {
+        opacity: 1;
+        position: absolute;
+        top: -80px;
+        left: 220px;
+        display: block;
+        width: 500px;
+        height: 300px;
+        background: rgba(50, 50, 50, .5);
+        box-shadow: inset 0 0 0 2px rgba(0, 0, 0, .1);
+        -webkit-transform-origin: 0% 100%;
+        -webkit-transition: all 300ms ease;
+        transition: all 300ms ease;
+    }
+
+    nav .circle li a:hover {
+        background: rgba(255, 120, 20, 1) !important;
+    }
+
+    nav .circle li:first-child a {
+        -webkit-transform: rotate(-165deg) skewX(-50deg);
+    }
+
+    nav .circle li:nth-child(2) a {
+        -webkit-transform: rotate(-205deg) skewX(-50deg);
+    }
+
+    nav .circle li:nth-child(3) a {
+        -webkit-transform: rotate(-245deg) skewX(-50deg);
+    }
+
+    nav .circle li:nth-child(4) a {
+        -webkit-transform: rotate(-285deg) skewX(-50deg);
+        pointer-events: none;
+    }
+
+    nav .circle li:nth-child(5) a {
+        -webkit-transform: rotate(-325deg) skewX(-50deg);
+        pointer-events: none;
+    }
+
+    nav .circle li:nth-child(6) a {
+        -webkit-transform: rotate(-45deg) skewX(-50deg);
+        pointer-events: none;
+    }
+
+    nav .circle li:nth-child(7) a {
+        -webkit-transform: rotate(-5deg) skewX(-50deg);
+        pointer-events: none;
+    }
+
+    nav .circle li:nth-child(8) a {
+        -webkit-transform: rotate(275deg) skewX(-50deg);
+        pointer-events: none;
+    }
+
+    nav .circle li:last-child a {
+        -webkit-transform: rotate(235deg) skewX(-50deg);
+        pointer-events: none;
+    }
+
+    nav .hidenav {
+        opacity: .5;
+        transform: scale(0.1) rotate(-60deg);
     }
 }
 
-@keyframes typing_event2 {
-    0% {
-        width: 0%;
-    }
-
-    75% {
-        width: 0%;
-    }
-
-    100% {
-        width: 100%;
-        border-right: 1px solid #fff;
-    }
+#test {
+    width: 100%;
+    height: 500px;
+    background-color: cornflowerblue;
 }

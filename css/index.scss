@@ -34,10 +34,10 @@
 
 #intro {
     width: 100%;
-    height: 48.78vw;
+    height: 967.5px;
     background-color: #000;
     background-image: url(../img/pixel_stars.jpg);
-    background-size: cover;
+    background-position: center;
 
     .title,
     .intro1,
@@ -80,7 +80,7 @@
     h2 {
         font-size: 60px;
         white-space: nowrap;
-        position: fixed;
+        position: absolute;
         top: 45%;
         left: 45%;
         transform: translate(-45%, -45%);
@@ -105,7 +105,7 @@
     h3 {
         font-size: 90px;
         white-space: nowrap;
-        position: fixed;
+        position: absolute;
         top: 55%;
         left: 55%;
         transform: translate(-55%, -55%);
@@ -175,126 +175,59 @@
     }
 
     nav {
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 9999;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        .menu {
+            width: 100px;
+            height: 100px;
+            background-color: #FFFFBD;
+            border-radius: 50%;
+            position: fixed;
+            top: 3%;
+            right: 8%;
+            cursor: pointer;
+            box-shadow: 2px 2px 50px gray;
+        }
+
+        .sub_menu {
+            width: 75px;
+            height: 75px;
+            background-color: #FFFFBD;
+            border-radius: 50%;
+            display: none;
+            cursor: pointer;
+            box-shadow: 2px 2px 50px gray;
+            
+            text-align: center;
+
+            img{
+                width: 50px;
+                height: 50px;
+                margin-top: 15px;
+            }
+        }
+
+        .sub_menu1 {
+            position: fixed;
+            top: 20%;
+            right: 8.65%;
+        }
+
+        .sub_menu2 {
+            position: fixed;
+            top: 30%;
+            right: 8.65%;
+        }
+
+        .sub_menu3 {
+            position: fixed;
+            top: 40%;
+            right: 8.65%;
+        }
     }
 
-    nav .menu {
-        position: fixed;
-        padding: 14px 0px;
-        height: 52px;
-        width: 80px;
-        top: 37.5px;
-        right: 152.5px;
-        border-radius: 50%;
-        z-index: 999;
-        cursor: pointer;
-        background: #FFFFBD;
-        transition: all 300ms ease;
-    }
-
-    nav .menu:hover {
-        transform: scale(1.2);
-    }
-
-    nav .menu:active {
-        transform: scale(.9);
-    }
-
-    nav .circle {
-        opacity: 1;
-        font-size: 20px;
-        color: #eee;
-        position: fixed;
-        top: -147.5px;
-        right: -27.5px;
-        display: block;
-        height: 400px;
-        width: 400px;
-        background: #FFFFBD;
-        padding: 20px;
-        transition: all 300ms ease;
-        border-radius: 50%;
-        overflow: hidden !important;
-    }
-
-    nav .circle li {
-        list-style: none !important;
-        background: rgba(0, 0, 0, 0);
-    }
-
-    nav .circle li a {
-        opacity: 1;
-        position: absolute;
-        top: -80px;
-        left: 220px;
-        display: block;
-        width: 500px;
-        height: 300px;
-        background: rgba(50, 50, 50, .5);
-        box-shadow: inset 0 0 0 2px rgba(0, 0, 0, .1);
-        -webkit-transform-origin: 0% 100%;
-        -webkit-transition: all 300ms ease;
-        transition: all 300ms ease;
-    }
-
-    nav .circle li a:hover {
-        background: rgba(255, 120, 20, 1) !important;
-    }
-
-    nav .circle li:first-child a {
-        -webkit-transform: rotate(-165deg) skewX(-50deg);
-    }
-
-    nav .circle li:nth-child(2) a {
-        -webkit-transform: rotate(-205deg) skewX(-50deg);
-    }
-
-    nav .circle li:nth-child(3) a {
-        -webkit-transform: rotate(-245deg) skewX(-50deg);
-    }
-
-    nav .circle li:nth-child(4) a {
-        -webkit-transform: rotate(-285deg) skewX(-50deg);
-        pointer-events: none;
-    }
-
-    nav .circle li:nth-child(5) a {
-        -webkit-transform: rotate(-325deg) skewX(-50deg);
-        pointer-events: none;
-    }
-
-    nav .circle li:nth-child(6) a {
-        -webkit-transform: rotate(-45deg) skewX(-50deg);
-        pointer-events: none;
-    }
-
-    nav .circle li:nth-child(7) a {
-        -webkit-transform: rotate(-5deg) skewX(-50deg);
-        pointer-events: none;
-    }
-
-    nav .circle li:nth-child(8) a {
-        -webkit-transform: rotate(275deg) skewX(-50deg);
-        pointer-events: none;
-    }
-
-    nav .circle li:last-child a {
-        -webkit-transform: rotate(235deg) skewX(-50deg);
-        pointer-events: none;
-    }
-
-    nav .hidenav {
-        opacity: .5;
-        transform: scale(0.1) rotate(-60deg);
-    }
 }
 
-#test {
+#aboutme {
     width: 100%;
-    height: 500px;
-    background-color: cornflowerblue;
+    height: 700px;
+    background-color: #000;
 }

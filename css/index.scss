@@ -22,7 +22,7 @@
 
 @mixin intro_font_before {
     position: absolute;
-    top: 0;
+    top: 30px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -32,11 +32,39 @@
     opacity: 0;
 }
 
+@mixin project_h3{
+    font-family: 'HBIOS-SYS';
+    color: #fff;
+    text-shadow: 5px 3px 1px gray;
+    font-size: 60px;
+    padding-top: 30px;
+    letter-spacing: 5px;
+}
+
+@mixin project_p{
+    font-family: 'HBIOS-SYS';
+    color: #fff;
+    font-size: 20px;
+    padding-top: 30px;
+    line-height: 30px;
+}
+
+@mixin project_btn{
+    font-family: 'HBIOS-SYS';
+    font-size: 24px;
+    margin-top: 30px;
+    margin-right: 30px;
+    width: 100px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 5px 3px 1px gray;
+}
+
 #intro {
     width: 100%;
-    height: 967.5px;
-    background-color: #000;
-    background-image: url(../img/pixel_stars.jpg);
+    height: 1100px;
+    background-image: url(../img/pixel_stars.png);
     background-position: center;
 
     .title,
@@ -55,7 +83,7 @@
 
     .intro1::before {
         @include intro_font_before;
-        content: "<h2>안녕하세요! 프론트엔드를 희망하는 김진성입니다.</h2>";
+        content: "<h2>안녕하세요! 신입 프론트엔드 개발자 김진성입니다.</h2>";
         animation: intro_typing 3s steps(60);
         animation-delay: 1s;
         animation-fill-mode: forwards;
@@ -81,9 +109,9 @@
         font-size: 60px;
         white-space: nowrap;
         position: absolute;
-        top: 45%;
-        left: 45%;
-        transform: translate(-45%, -45%);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         color: #000;
         font-family: 'HBIOS-SYS';
     }
@@ -106,15 +134,15 @@
         font-size: 90px;
         white-space: nowrap;
         position: absolute;
-        top: 55%;
-        left: 55%;
-        transform: translate(-55%, -55%);
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -60%);
         color: #000;
         font-family: 'HBIOS-SYS';
     }
 
     h3::before {
-        content: "FRONTEND";
+        content: "FRONTEND DEVELOPER";
         position: absolute;
         top: 0;
         left: 0;
@@ -195,14 +223,7 @@
             display: none;
             cursor: pointer;
             box-shadow: 2px 2px 50px gray;
-            
             text-align: center;
-
-            img{
-                width: 50px;
-                height: 50px;
-                margin-top: 15px;
-            }
         }
 
         .sub_menu1 {
@@ -223,11 +244,74 @@
             right: 8.65%;
         }
     }
-
 }
 
-#aboutme {
+#project {
     width: 100%;
-    height: 700px;
-    background-color: #000;
+    height: 2000px;
+    background: linear-gradient(#6B9ED6 1%, #182431);
+
+    .project_content{
+        width: 1200px;
+        margin: 0 auto;
+
+        h2{
+            text-align: center;
+            font-family: 'HBIOS-SYS';
+            color: #FFFFBD;
+            text-shadow: 5px 3px 1px gray;
+            font-size: 72px;
+            padding-top: 100px;
+            padding-bottom: 150px;
+        }
+
+        .shure{
+            position: relative;
+            height: 600px;
+            h3{
+                @include project_h3;
+            }
+    
+            p{
+                @include project_p;
+            }
+    
+            button{
+                @include project_btn;
+            }
+    
+            img{
+                width: 50%;
+                position: absolute;
+                top: 5%;
+                right: 0;
+            }
+        }
+
+        .talesweaver{
+            position: relative;
+            height: 600px;
+            h3{
+                text-align: right;
+                @include project_h3;
+            }
+
+            p{
+                text-align: right;
+                @include project_p;
+            }
+
+            button{
+                float: right;
+                @include project_btn;
+            }
+
+            img{
+                width: 50%;
+                position: absolute;
+                top: 5%;
+                left: 0;
+            }
+        }
+    }
 }

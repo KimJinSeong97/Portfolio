@@ -1,7 +1,9 @@
-@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
+  color: #fff;
 }
 
 ol,
@@ -14,350 +16,115 @@ a {
   text-decoration: none;
 }
 
-@font-face {
-  font-family: "HBIOS-SYS";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2207-01@1.0/HBIOS-SYS.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
+body {
+  overflow-x: hidden;
 }
-#intro {
-  width: 100%;
-  height: 1100px;
-  background-image: url(../img/pixel_stars.png);
-  background-position: center;
-}
-#intro .title,
-#intro .intro1,
-#intro .intro2,
-#intro .intro3 {
-  font-size: 24px;
-  white-space: pre;
+body #intro {
+  height: 1000px;
   position: relative;
-  top: 0;
-  left: 0;
+}
+body #intro h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 100;
+  letter-spacing: 1.5px;
+  font-size: 84px;
   color: #000;
-  font-family: "HBIOS-SYS";
-  margin: 0 1% 1% 1%;
-}
-#intro .title::before {
-  position: absolute;
-  top: 30px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  color: #FFFFBD;
-  overflow: hidden;
-  font-family: "HBIOS-SYS";
-  opacity: 0;
-  content: "<title>김진성_포트폴리오</title>";
-  -webkit-animation: intro_typing 3s steps(60);
-          animation: intro_typing 3s steps(60);
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-#intro .intro1::before {
-  position: absolute;
-  top: 30px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  color: #FFFFBD;
-  overflow: hidden;
-  font-family: "HBIOS-SYS";
-  opacity: 0;
-  content: "<h2>안녕하세요! 신입 프론트엔드 개발자 김진성입니다.</h2>";
-  -webkit-animation: intro_typing 3s steps(60);
-          animation: intro_typing 3s steps(60);
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-#intro .intro2::before {
-  position: absolute;
-  top: 30px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  color: #FFFFBD;
-  overflow: hidden;
-  font-family: "HBIOS-SYS";
-  opacity: 0;
-  content: "<p>저의 정보와 작업물들은 아래로 스크롤하셔서 확인 하실 수 있습니다.<br>";
-  -webkit-animation: intro_typing 3s steps(60);
-          animation: intro_typing 3s steps(60);
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-#intro .intro3::before {
-  position: absolute;
-  top: 30px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  color: #FFFFBD;
-  overflow: hidden;
-  font-family: "HBIOS-SYS";
-  opacity: 0;
-  content: "방문해주셔서 감사합니다!</p>";
-  -webkit-animation: intro_typing 3s steps(60);
-          animation: intro_typing 3s steps(60);
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-#intro h2 {
-  font-size: 60px;
-  white-space: nowrap;
+  text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #000;
-  font-family: "HBIOS-SYS";
+  z-index: 3;
 }
-#intro h2::before {
-  content: "KIM JIN SEONG";
+body #intro .left_box {
   position: absolute;
-  top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  color: #fff;
-  overflow: hidden;
-  -webkit-animation: typing_event1 6s steps(24);
-          animation: typing_event1 6s steps(24);
-  font-family: "HBIOS-SYS";
-  text-shadow: 6px 4px 2px gray;
+  height: 1000px;
+  background-color: #000;
+  z-index: 1;
 }
-#intro h3 {
-  font-size: 90px;
-  white-space: nowrap;
+body #intro .right_box {
   position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -60%);
-  color: #000;
-  font-family: "HBIOS-SYS";
-}
-#intro h3::before {
-  content: "FRONTEND DEVELOPER";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  color: #fff;
-  overflow: hidden;
-  -webkit-animation: typing_event2 7.5s steps(18);
-          animation: typing_event2 7.5s steps(18);
-  font-family: "HBIOS-SYS";
-  text-shadow: 6px 4px 2px gray;
-}
-@-webkit-keyframes intro_typing {
-  0% {
-    width: 0%;
-    opacity: 1;
-  }
-  50% {
-    width: 50%;
-  }
-  100% {
-    width: 100%;
-    opacity: 1;
-  }
-}
-@keyframes intro_typing {
-  0% {
-    width: 0%;
-    opacity: 1;
-  }
-  50% {
-    width: 50%;
-  }
-  100% {
-    width: 100%;
-    opacity: 1;
-  }
-}
-@-webkit-keyframes typing_event1 {
-  0% {
-    width: 0%;
-  }
-  70% {
-    width: 0%;
-  }
-  100% {
-    width: 100%;
-    border-right: 1px solid #fff;
-  }
-}
-@keyframes typing_event1 {
-  0% {
-    width: 0%;
-  }
-  70% {
-    width: 0%;
-  }
-  100% {
-    width: 100%;
-    border-right: 1px solid #fff;
-  }
-}
-@-webkit-keyframes typing_event2 {
-  0% {
-    width: 0%;
-  }
-  85% {
-    width: 0%;
-  }
-  100% {
-    width: 100%;
-    border-right: 1px solid #fff;
-  }
-}
-@keyframes typing_event2 {
-  0% {
-    width: 0%;
-  }
-  85% {
-    width: 0%;
-  }
-  100% {
-    width: 100%;
-    border-right: 1px solid #fff;
-  }
-}
-#intro nav .menu {
-  width: 100px;
-  height: 100px;
-  background-color: #FFFFBD;
-  border-radius: 50%;
-  position: fixed;
-  top: 3%;
-  right: 8%;
-  cursor: pointer;
-  box-shadow: 2px 2px 50px gray;
-}
-#intro nav .sub_menu {
-  width: 75px;
-  height: 75px;
-  background-color: #FFFFBD;
-  border-radius: 50%;
-  display: none;
-  cursor: pointer;
-  box-shadow: 2px 2px 50px gray;
-  text-align: center;
-}
-#intro nav .sub_menu1 {
-  position: fixed;
-  top: 20%;
-  right: 8.65%;
-}
-#intro nav .sub_menu2 {
-  position: fixed;
-  top: 30%;
-  right: 8.65%;
-}
-#intro nav .sub_menu3 {
-  position: fixed;
-  top: 40%;
-  right: 8.65%;
-}
-
-#project {
-  width: 100%;
-  height: 2000px;
-  background: linear-gradient(#6B9ED6 1%, #182431);
-}
-#project .project_content {
-  width: 1200px;
-  margin: 0 auto;
-}
-#project .project_content h2 {
-  text-align: center;
-  font-family: "HBIOS-SYS";
-  color: #FFFFBD;
-  text-shadow: 5px 3px 1px gray;
-  font-size: 72px;
-  padding-top: 100px;
-  padding-bottom: 150px;
-}
-#project .project_content .shure {
-  position: relative;
-  height: 600px;
-}
-#project .project_content .shure h3 {
-  font-family: "HBIOS-SYS";
-  color: #fff;
-  text-shadow: 5px 3px 1px gray;
-  font-size: 60px;
-  padding-top: 30px;
-  letter-spacing: 5px;
-}
-#project .project_content .shure p {
-  font-family: "HBIOS-SYS";
-  color: #fff;
-  font-size: 20px;
-  padding-top: 30px;
-  line-height: 30px;
-}
-#project .project_content .shure button {
-  font-family: "HBIOS-SYS";
-  font-size: 24px;
-  margin-top: 30px;
-  margin-right: 30px;
-  width: 100px;
-  height: 50px;
-  border: none;
-  cursor: pointer;
-  box-shadow: 5px 3px 1px gray;
-}
-#project .project_content .shure img {
-  width: 50%;
-  position: absolute;
-  top: 5%;
   right: 0;
+  height: 1000px;
+  background-color: #000;
+  z-index: 1;
 }
-#project .project_content .talesweaver {
-  position: relative;
-  height: 600px;
-}
-#project .project_content .talesweaver h3 {
-  text-align: right;
-  font-family: "HBIOS-SYS";
-  color: #fff;
-  text-shadow: 5px 3px 1px gray;
-  font-size: 60px;
-  padding-top: 30px;
-  letter-spacing: 5px;
-}
-#project .project_content .talesweaver p {
-  text-align: right;
-  font-family: "HBIOS-SYS";
-  color: #fff;
-  font-size: 20px;
-  padding-top: 30px;
-  line-height: 30px;
-}
-#project .project_content .talesweaver button {
-  float: right;
-  font-family: "HBIOS-SYS";
-  font-size: 24px;
-  margin-top: 30px;
-  margin-right: 30px;
-  width: 100px;
-  height: 50px;
-  border: none;
-  cursor: pointer;
-  box-shadow: 5px 3px 1px gray;
-}
-#project .project_content .talesweaver img {
-  width: 50%;
+body #intro .bottom_box {
   position: absolute;
-  top: 5%;
-  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 2;
+}
+body #intro .bottom_box2 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #f0f0f0;
+  z-index: 4;
+}
+body #project {
+  height: auto;
+  background-color: #000;
+}
+body #project .inner {
+  width: 1200px;
+  height: 5000px;
+  margin: 0 auto;
+  padding-top: 500px;
+}
+body #project .inner h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 100;
+  letter-spacing: 1.5px;
+  font-size: 24px;
+  color: #ff6600;
+  text-shadow: 2px 2px 1px rgba(255, 115, 0, 0.5);
+  letter-spacing: 5px;
+  margin-bottom: 200px;
+}
+body #project .inner .shure .num {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1.5px;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+body #project .inner .shure h3 {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1.5px;
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+body #project .inner .shure img {
+  width: 750px;
+  height: 450px;
+  margin-bottom: 20px;
+}
+body #project .inner .shure .information {
+  width: 750px;
+}
+body #project .inner .shure .information .explain {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1.5px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+body #project .inner .shure .information .link {
+  text-align: center;
+  margin-bottom: 30px;
+}
+body #project .inner .shure .information .link a {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1.5px;
+  padding: 12px;
+  border: 1px solid #fff;
+}
+body #project .inner .shure .information .skill {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+body #project .inner .shure .information .skill span {
+  margin-right: 12px;
 }

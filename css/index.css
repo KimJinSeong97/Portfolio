@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&family=Lato:wght@300&family=Playfair+Display&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -64,8 +63,31 @@ body #intro .bottom_box2 {
   background-color: #f0f0f0;
   z-index: 4;
 }
+body #intro .bottom_box2 header {
+  width: 95%;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2ecc71;
+}
+body #intro .bottom_box2 header .logo img {
+  width: 40%;
+}
+body #intro .bottom_box2 header nav ul {
+  display: flex;
+}
+body #intro .bottom_box2 header nav ul li {
+  margin-right: 10px;
+}
+body #intro .bottom_box2 header nav ul li a {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1.5px;
+  color: #000;
+}
 body #project {
-  height: auto;
+  height: 6000px;
   background-color: #000;
 }
 body #project .inner {
@@ -79,52 +101,193 @@ body #project .inner h2 {
   font-weight: 100;
   letter-spacing: 1.5px;
   font-size: 24px;
-  color: #ff6600;
-  text-shadow: 2px 2px 1px rgba(255, 115, 0, 0.5);
+  color: #2ecc71;
+  text-shadow: 2px 2px 1px rgba(229, 255, 0, 0.5);
   letter-spacing: 5px;
   margin-bottom: 200px;
 }
-body #project .inner .shure .num {
+body #project .inner .shure,
+body #project .inner .millie,
+body #project .inner .applemusic {
+  float: left;
+  margin-bottom: 200px;
+}
+body #project .inner .shure .num,
+body #project .inner .millie .num,
+body #project .inner .applemusic .num {
   font-family: "Lato", sans-serif;
   letter-spacing: 1.5px;
   font-size: 25px;
   margin-bottom: 10px;
 }
-body #project .inner .shure h3 {
+body #project .inner .shure h3,
+body #project .inner .millie h3,
+body #project .inner .applemusic h3 {
   font-family: "Lato", sans-serif;
   letter-spacing: 1.5px;
   font-size: 42px;
-  margin-bottom: 20px;
 }
-body #project .inner .shure img {
+body #project .inner .shure h4,
+body #project .inner .millie h4,
+body #project .inner .applemusic h4 {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1.5px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #aaa;
+}
+body #project .inner .shure h5,
+body #project .inner .millie h5,
+body #project .inner .applemusic h5 {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1.5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #f0f0f0;
+}
+body #project .inner .shure h6,
+body #project .inner .millie h6,
+body #project .inner .applemusic h6 {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  border: 2px solid #f0f0f0;
+}
+body #project .inner .shure img,
+body #project .inner .millie img,
+body #project .inner .applemusic img {
   width: 750px;
   height: 450px;
   margin-bottom: 20px;
+  cursor: pointer;
+  display: block;
 }
-body #project .inner .shure .information {
+body #project .inner .shure .information,
+body #project .inner .millie .information,
+body #project .inner .applemusic .information {
   width: 750px;
 }
-body #project .inner .shure .information .explain {
-  font-family: "Lato", sans-serif;
+body #project .inner .shure .information .explain,
+body #project .inner .millie .information .explain,
+body #project .inner .applemusic .information .explain {
+  font-family: "Gothic A1", sans-serif;
   letter-spacing: 1.5px;
   text-align: center;
   margin-bottom: 30px;
+  word-break: keep-all;
 }
-body #project .inner .shure .information .link {
+body #project .inner .shure .information .link,
+body #project .inner .millie .information .link,
+body #project .inner .applemusic .information .link {
   text-align: center;
   margin-bottom: 30px;
 }
-body #project .inner .shure .information .link a {
+body #project .inner .shure .information .link a,
+body #project .inner .millie .information .link a,
+body #project .inner .applemusic .information .link a {
   font-family: "Lato", sans-serif;
   letter-spacing: 1.5px;
   padding: 12px;
   border: 1px solid #fff;
 }
-body #project .inner .shure .information .skill {
+body #project .inner .shure .information .skill,
+body #project .inner .millie .information .skill,
+body #project .inner .applemusic .information .skill {
   font-family: "Lato", sans-serif;
   letter-spacing: 1.5px;
   text-align: center;
 }
-body #project .inner .shure .information .skill span {
+body #project .inner .shure .information .skill span,
+body #project .inner .millie .information .skill span,
+body #project .inner .applemusic .information .skill span {
+  margin-right: 12px;
+}
+body #project .inner .talesweaver,
+body #project .inner .baskinrobbins {
+  float: right;
+  margin-bottom: 200px;
+}
+body #project .inner .talesweaver .num,
+body #project .inner .baskinrobbins .num {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1.5px;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+body #project .inner .talesweaver h3,
+body #project .inner .baskinrobbins h3 {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1.5px;
+  font-size: 42px;
+}
+body #project .inner .talesweaver h4,
+body #project .inner .baskinrobbins h4 {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1.5px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #aaa;
+}
+body #project .inner .talesweaver h5,
+body #project .inner .baskinrobbins h5 {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1.5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #f0f0f0;
+}
+body #project .inner .talesweaver h6,
+body #project .inner .baskinrobbins h6 {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  border: 2px solid #f0f0f0;
+}
+body #project .inner .talesweaver img,
+body #project .inner .baskinrobbins img {
+  width: 750px;
+  height: 450px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  display: block;
+}
+body #project .inner .talesweaver .information,
+body #project .inner .baskinrobbins .information {
+  width: 750px;
+}
+body #project .inner .talesweaver .information .explain,
+body #project .inner .baskinrobbins .information .explain {
+  font-family: "Gothic A1", sans-serif;
+  letter-spacing: 1.5px;
+  text-align: center;
+  margin-bottom: 30px;
+  word-break: keep-all;
+}
+body #project .inner .talesweaver .information .link,
+body #project .inner .baskinrobbins .information .link {
+  text-align: center;
+  margin-bottom: 30px;
+}
+body #project .inner .talesweaver .information .link a,
+body #project .inner .baskinrobbins .information .link a {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1.5px;
+  padding: 12px;
+  border: 1px solid #fff;
+}
+body #project .inner .talesweaver .information .skill,
+body #project .inner .baskinrobbins .information .skill {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+body #project .inner .talesweaver .information .skill span,
+body #project .inner .baskinrobbins .information .skill span {
   margin-right: 12px;
 }

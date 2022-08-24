@@ -2,9 +2,7 @@
 
 @import "reset";
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&family=Lato:wght@300&family=Playfair+Display&display=swap');
 
 @mixin Eng_title {
     font-family: 'Playfair Display', serif;
@@ -14,6 +12,11 @@
 
 @mixin Eng_sub_title {
     font-family: 'Lato', sans-serif;
+    letter-spacing: 1.5px;
+}
+
+@mixin Kor_font {
+    font-family: 'Gothic A1', sans-serif;
     letter-spacing: 1.5px;
 }
 
@@ -66,11 +69,43 @@ body {
             width: 100%;
             background-color: #f0f0f0;
             z-index: 4;
+
+            header {
+                width: 95%;
+                height: 100px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #2ecc71;
+
+                .logo {
+                    img {
+                        width: 40%;
+                    }
+                }
+
+                nav {
+                    ul {
+                        display: flex;
+
+                        li {
+                            margin-right: 10px;
+
+                            a {
+                                @include Eng_sub_title;
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
+
     #project {
-        height: auto;
+        height: 6000px;
         background-color: #000;
 
         .inner {
@@ -82,13 +117,18 @@ body {
             h2 {
                 @include Eng_title;
                 font-size: 24px;
-                color: #ff6600;
-                text-shadow: 2px 2px 1px rgba(255, 115, 0, 0.5);
+                color: #2ecc71;
+                text-shadow: 2px 2px 1px rgba(229, 255, 0, 0.5);
                 letter-spacing: 5px;
                 margin-bottom: 200px;
             }
 
-            .shure {
+            .shure,
+            .millie,
+            .applemusic {
+                float: left;
+                margin-bottom: 200px;
+
                 .num {
                     @include Eng_sub_title;
                     font-size: 25px;
@@ -98,22 +138,128 @@ body {
                 h3 {
                     @include Eng_sub_title;
                     font-size: 42px;
+                }
+
+                h4 {
+                    @include Eng_sub_title;
+                    font-size: 18px;
                     margin-bottom: 20px;
+                    color: #aaa;
+                }
+
+                h5 {
+                    @include Eng_sub_title;
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                    color: #f0f0f0;
+                }
+
+                h6 {
+                    width: 25px;
+                    height: 25px;
+                    display: inline-block;
+                    border-radius: 50%;
+                    margin-right: 5px;
+                    margin-bottom: 10px;
+                    border: 2px solid #f0f0f0;
                 }
 
                 img {
                     width: 750px;
                     height: 450px;
                     margin-bottom: 20px;
+                    cursor: pointer;
+                    display: block;
                 }
 
                 .information {
                     width: 750px;
 
                     .explain {
-                        @include Eng_sub_title;
+                        @include Kor_font;
                         text-align: center;
                         margin-bottom: 30px;
+                        word-break: keep-all;
+                    }
+
+                    .link {
+                        text-align: center;
+                        margin-bottom: 30px;
+
+                        a {
+                            @include Eng_sub_title;
+                            padding: 12px;
+                            border: 1px solid #fff;
+                        }
+                    }
+
+                    .skill {
+                        @include Eng_sub_title;
+                        text-align: center;
+
+                        span {
+                            margin-right: 12px;
+                        }
+                    }
+                }
+            }
+
+            .talesweaver,
+            .baskinrobbins {
+                float: right;
+                margin-bottom: 200px;
+
+                .num {
+                    @include Eng_sub_title;
+                    font-size: 25px;
+                    margin-bottom: 10px;
+                }
+
+                h3 {
+                    @include Eng_sub_title;
+                    font-size: 42px;
+                }
+
+                h4 {
+                    @include Eng_sub_title;
+                    font-size: 18px;
+                    margin-bottom: 20px;
+                    color: #aaa;
+                }
+
+                h5 {
+                    @include Eng_sub_title;
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                    color: #f0f0f0;
+                }
+
+                h6 {
+                    width: 25px;
+                    height: 25px;
+                    display: inline-block;
+                    border-radius: 50%;
+                    margin-right: 5px;
+                    margin-bottom: 10px;
+                    border: 2px solid #f0f0f0;
+                }
+
+                img {
+                    width: 750px;
+                    height: 450px;
+                    margin-bottom: 20px;
+                    cursor: pointer;
+                    display: block;
+                }
+
+                .information {
+                    width: 750px;
+
+                    .explain {
+                        @include Kor_font;
+                        text-align: center;
+                        margin-bottom: 30px;
+                        word-break: keep-all;
                     }
 
                     .link {

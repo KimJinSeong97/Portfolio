@@ -71,17 +71,18 @@ body {
             z-index: 4;
 
             header {
-                width: 95%;
+                width: 90%;
                 height: 100px;
-                margin: 0 auto;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                background-color: #2ecc71;
+                position: absolute;
+                left: 5%;
 
                 .logo {
                     img {
                         width: 40%;
+                        cursor: pointer;
                     }
                 }
 
@@ -90,19 +91,44 @@ body {
                         display: flex;
 
                         li {
-                            margin-right: 10px;
+                            margin-left: 30px;
 
                             a {
                                 @include Eng_sub_title;
                                 color: #000;
+                                font-weight: 600;
+                                font-size: 18px;
+                            }
+
+                            a::after {
+                                content: '';
+                                display: block;
+                                border-bottom: 2px solid #000;
+                                padding-bottom: 3px;
+                                transform: scaleX(0);
+                                transition: .4s ease-out;
+                            }
+
+                            a:hover::after {
+                                transform: scaleX(1);
                             }
                         }
                     }
                 }
             }
+
+            .introduce {
+                h3 {
+                    @include Eng_title;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: #000;
+                }
+            }
         }
     }
-
 
     #project {
         height: 6000px;
@@ -117,8 +143,8 @@ body {
             h2 {
                 @include Eng_title;
                 font-size: 24px;
-                color: #2ecc71;
-                text-shadow: 2px 2px 1px rgba(229, 255, 0, 0.5);
+                color: #fff;
+                text-shadow: 2px 2px 1px #f0f0f0;
                 letter-spacing: 5px;
                 margin-bottom: 200px;
             }

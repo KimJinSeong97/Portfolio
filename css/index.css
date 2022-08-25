@@ -64,26 +64,50 @@ body #intro .bottom_box2 {
   z-index: 4;
 }
 body #intro .bottom_box2 header {
-  width: 95%;
+  width: 90%;
   height: 100px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #2ecc71;
+  position: absolute;
+  left: 5%;
 }
 body #intro .bottom_box2 header .logo img {
   width: 40%;
+  cursor: pointer;
 }
 body #intro .bottom_box2 header nav ul {
   display: flex;
 }
 body #intro .bottom_box2 header nav ul li {
-  margin-right: 10px;
+  margin-left: 30px;
 }
 body #intro .bottom_box2 header nav ul li a {
   font-family: "Lato", sans-serif;
   letter-spacing: 1.5px;
+  color: #000;
+  font-weight: 600;
+  font-size: 18px;
+}
+body #intro .bottom_box2 header nav ul li a::after {
+  content: "";
+  display: block;
+  border-bottom: 2px solid #000;
+  padding-bottom: 3px;
+  transform: scaleX(0);
+  transition: 0.4s ease-out;
+}
+body #intro .bottom_box2 header nav ul li a:hover::after {
+  transform: scaleX(1);
+}
+body #intro .bottom_box2 .introduce h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 100;
+  letter-spacing: 1.5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: #000;
 }
 body #project {
@@ -101,8 +125,8 @@ body #project .inner h2 {
   font-weight: 100;
   letter-spacing: 1.5px;
   font-size: 24px;
-  color: #2ecc71;
-  text-shadow: 2px 2px 1px rgba(229, 255, 0, 0.5);
+  color: #fff;
+  text-shadow: 2px 2px 1px #f0f0f0;
   letter-spacing: 5px;
   margin-bottom: 200px;
 }

@@ -118,17 +118,17 @@ body #project .inner {
   width: 1200px;
   height: 5000px;
   margin: 0 auto;
-  padding-top: 500px;
+  padding-top: 350px;
 }
 body #project .inner h2 {
   font-family: "Playfair Display", serif;
   font-weight: 100;
   letter-spacing: 1.5px;
-  font-size: 24px;
+  font-size: 36px;
   color: #fff;
-  text-shadow: 2px 2px 1px #f0f0f0;
   letter-spacing: 5px;
-  margin-bottom: 200px;
+  margin-bottom: 350px;
+  text-align: center;
 }
 body #project .inner .shure,
 body #project .inner .millie,
@@ -314,4 +314,30 @@ body #project .inner .baskinrobbins .information .skill {
 body #project .inner .talesweaver .information .skill span,
 body #project .inner .baskinrobbins .information .skill span {
   margin-right: 12px;
+}
+body #skill {
+  height: 1500px;
+  background-color: #f0f0f0;
+}
+body #skill .inner {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 350px;
+}
+body #skill .inner h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 100;
+  letter-spacing: 1.5px;
+  font-size: 36px;
+  color: #000;
+  letter-spacing: 5px;
+  margin-bottom: 350px;
+  text-align: center;
+}
+body #skill .inner .skill_icon {
+  display: flex;
+  justify-content: space-evenly;
+}
+body #skill .inner .skill_icon img {
+  width: 10%;
 }

@@ -154,16 +154,21 @@ body {
             .applemusic {
                 float: left;
                 margin-bottom: 200px;
+                position: relative;
 
                 .num {
                     @include Eng_sub_title;
-                    font-size: 25px;
-                    margin-bottom: 10px;
+                    font-size: 400px;
+                    position: absolute;
+                    color: #444;
+                    margin-top: -200px;
+                    left: -125px;
                 }
 
                 h3 {
                     @include Eng_sub_title;
                     font-size: 42px;
+                    text-align: right;
                 }
 
                 h4 {
@@ -171,6 +176,7 @@ body {
                     font-size: 18px;
                     margin-bottom: 20px;
                     color: #aaa;
+                    text-align: right;
                 }
 
                 h5 {
@@ -178,6 +184,7 @@ body {
                     font-size: 16px;
                     margin-bottom: 10px;
                     color: #f0f0f0;
+                    text-align: right;
                 }
 
                 h6 {
@@ -188,6 +195,8 @@ body {
                     margin-right: 5px;
                     margin-bottom: 10px;
                     border: 2px solid #f0f0f0;
+                    position: inherit;
+                    right: -682.5px;
                 }
 
                 img {
@@ -196,6 +205,7 @@ body {
                     margin-bottom: 20px;
                     cursor: pointer;
                     display: block;
+                    position: inherit;
                 }
 
                 .information {
@@ -234,11 +244,15 @@ body {
             .baskinrobbins {
                 float: right;
                 margin-bottom: 200px;
+                position: relative;
 
                 .num {
                     @include Eng_sub_title;
-                    font-size: 25px;
-                    margin-bottom: 10px;
+                    font-size: 400px;
+                    position: absolute;
+                    color: #444;
+                    margin-top: -200px;
+                    right: -125px;
                 }
 
                 h3 {
@@ -268,6 +282,7 @@ body {
                     margin-right: 5px;
                     margin-bottom: 10px;
                     border: 2px solid #f0f0f0;
+                    position: inherit;
                 }
 
                 img {
@@ -276,6 +291,7 @@ body {
                     margin-bottom: 20px;
                     cursor: pointer;
                     display: block;
+                    position: inherit;
                 }
 
                 .information {
@@ -313,7 +329,7 @@ body {
     }
 
     #skill {
-        height: 1500px;
+        height: 1600px;
         background-color: #f0f0f0;
 
         .inner {
@@ -330,12 +346,48 @@ body {
                 text-align: center;
             }
 
-            .skill_icon{
+            .skill_icon1,
+            .skill_icon2,
+            .skill_icon3 {
                 display: flex;
                 justify-content: space-evenly;
-                img{
-                    width: 10%;
+                margin-bottom: 100px;
+
+                img {
+                    width: 15%;
+                    margin-left: 2%;
+                    margin-right: 2%;
                 }
+
+                p {
+                    @include Kor_font;
+                    font-weight: 600;
+                    width: 60%;
+                    color: #000;
+                    word-break: keep-all;
+                    line-height: 30px;
+                    padding-top: 3%;
+                    padding-left: 3%;
+                }
+            }
+        }
+    }
+
+    #about {
+        height: 1600px;
+
+        .inner {
+            width: 1200px;
+            margin: 0 auto;
+            padding-top: 350px;
+
+            h2 {
+                @include Eng_title;
+                font-size: 36px;
+                color: #000;
+                letter-spacing: 5px;
+                margin-bottom: 350px;
+                text-align: center;
             }
         }
     }

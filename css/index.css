@@ -101,14 +101,17 @@ body #intro .bottom_box2 header nav ul li a:hover::after {
   transform: scaleX(1);
 }
 body #intro .bottom_box2 .introduce h3 {
-  font-family: "Playfair Display", serif;
-  font-weight: 100;
+  font-family: "Gothic A1", sans-serif;
   letter-spacing: 1.5px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #000;
+}
+body #intro .bottom_box2 .introduce p {
+  font-family: "Gothic A1", sans-serif;
+  letter-spacing: 1.5px;
 }
 body #project {
   height: 6000px;
@@ -136,6 +139,9 @@ body #project .inner .applemusic {
   float: left;
   margin-bottom: 200px;
   position: relative;
+  opacity: 0;
+  transform: translateY(250px);
+  transition: all 1s ease-in-out;
 }
 body #project .inner .shure .num,
 body #project .inner .millie .num,
@@ -244,6 +250,9 @@ body #project .inner .baskinrobbins {
   float: right;
   margin-bottom: 200px;
   position: relative;
+  opacity: 0;
+  transform: translateY(250px);
+  transition: all 1s ease-in-out;
 }
 body #project .inner .talesweaver .num,
 body #project .inner .baskinrobbins .num {
@@ -332,13 +341,13 @@ body #project .inner .baskinrobbins .information .skill span {
   margin-right: 12px;
 }
 body #skill {
-  height: 1600px;
+  height: 1200px;
   background-color: #f0f0f0;
 }
 body #skill .inner {
   width: 1200px;
   margin: 0 auto;
-  padding-top: 350px;
+  padding-top: 250px;
 }
 body #skill .inner h2 {
   font-family: "Playfair Display", serif;
@@ -347,30 +356,27 @@ body #skill .inner h2 {
   font-size: 36px;
   color: #000;
   letter-spacing: 5px;
-  margin-bottom: 350px;
+  margin-bottom: 250px;
   text-align: center;
 }
 body #skill .inner .skill_icon1,
-body #skill .inner .skill_icon2,
-body #skill .inner .skill_icon3 {
+body #skill .inner .skill_icon2 {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 100px;
 }
 body #skill .inner .skill_icon1 img,
-body #skill .inner .skill_icon2 img,
-body #skill .inner .skill_icon3 img {
-  width: 15%;
-  margin-left: 2%;
-  margin-right: 2%;
+body #skill .inner .skill_icon2 img {
+  width: 12.5%;
+  margin-left: 1%;
+  margin-right: 1%;
 }
 body #skill .inner .skill_icon1 p,
-body #skill .inner .skill_icon2 p,
-body #skill .inner .skill_icon3 p {
+body #skill .inner .skill_icon2 p {
   font-family: "Gothic A1", sans-serif;
   letter-spacing: 1.5px;
   font-weight: 600;
-  width: 60%;
+  width: 100%;
   color: #000;
   word-break: keep-all;
   line-height: 30px;
@@ -378,12 +384,12 @@ body #skill .inner .skill_icon3 p {
   padding-left: 3%;
 }
 body #about {
-  height: 1600px;
+  height: 1200px;
 }
 body #about .inner {
   width: 1200px;
   margin: 0 auto;
-  padding-top: 350px;
+  padding-top: 250px;
 }
 body #about .inner h2 {
   font-family: "Playfair Display", serif;
@@ -392,6 +398,6 @@ body #about .inner h2 {
   font-size: 36px;
   color: #000;
   letter-spacing: 5px;
-  margin-bottom: 350px;
+  margin-bottom: 250px;
   text-align: center;
 }

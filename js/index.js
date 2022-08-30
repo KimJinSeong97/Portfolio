@@ -16,3 +16,25 @@ intro.fromTo('#intro h2', 1, { y: 0, opacity: 1 }, { y: -50, opacity: 0 }, 3.5);
 intro.fromTo('.bottom_box2', 1.5, { y: 0 + 'vw' }, { y: 0 + 'vw', height: 1000 + 'px', ease: 'expo.out' }, 4.5);
 intro.fromTo('header', 1, { y: 25, opacity: 0 }, { y: 0, opacity: 1 }, 6);
 intro.fromTo('.introduce h3', 1, { y: 25, opacity: 0 }, { y: 0, opacity: 1 }, 6.5);
+
+//스크롤하면 나타나는 프로젝트
+$(window).scroll(function () {
+    var scrollTop = $(this).scrollTop();
+
+    var scroll_project = $('#project .inner').offset().top;
+    if (scrollTop > scroll_project + 0) {
+        $('.shure').css('transform', 'translate(0px)').css({ opacity: 1 });
+    }
+    if (scrollTop > scroll_project + 1000) {
+        $('.talesweaver').css('transform', 'translate(0px)').css({ opacity: 1 });
+    }
+    if (scrollTop > scroll_project + 2000) {
+        $('.millie').css('transform', 'translate(0px)').css({ opacity: 1 });
+    }
+    if (scrollTop > scroll_project + 3000) {
+        $('.baskinrobbins').css('transform', 'translate(0px)').css({ opacity: 1 });
+    }
+    if (scrollTop > scroll_project + 4000) {
+        $('.applemusic').css('transform', 'translate(0px)').css({ opacity: 1 });
+    }
+})

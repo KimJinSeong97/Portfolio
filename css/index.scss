@@ -119,12 +119,16 @@ body {
 
             .introduce {
                 h3 {
-                    @include Eng_title;
+                    @include Kor_font;
                     position: absolute;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
                     color: #000;
+                }
+
+                p {
+                    @include Kor_font;
                 }
             }
         }
@@ -155,6 +159,9 @@ body {
                 float: left;
                 margin-bottom: 200px;
                 position: relative;
+                opacity: 0;
+                transform: translateY(250px);
+                transition: all 1s ease-in-out;
 
                 .num {
                     @include Eng_sub_title;
@@ -245,6 +252,9 @@ body {
                 float: right;
                 margin-bottom: 200px;
                 position: relative;
+                opacity: 0;
+                transform: translateY(250px);
+                transition: all 1s ease-in-out;
 
                 .num {
                     @include Eng_sub_title;
@@ -329,40 +339,39 @@ body {
     }
 
     #skill {
-        height: 1600px;
+        height: 1200px;
         background-color: #f0f0f0;
 
         .inner {
             width: 1200px;
             margin: 0 auto;
-            padding-top: 350px;
+            padding-top: 250px;
 
             h2 {
                 @include Eng_title;
                 font-size: 36px;
                 color: #000;
                 letter-spacing: 5px;
-                margin-bottom: 350px;
+                margin-bottom: 250px;
                 text-align: center;
             }
 
             .skill_icon1,
-            .skill_icon2,
-            .skill_icon3 {
+            .skill_icon2 {
                 display: flex;
                 justify-content: space-evenly;
                 margin-bottom: 100px;
 
                 img {
-                    width: 15%;
-                    margin-left: 2%;
-                    margin-right: 2%;
+                    width: 12.5%;
+                    margin-left: 1%;
+                    margin-right: 1%;
                 }
 
                 p {
                     @include Kor_font;
                     font-weight: 600;
-                    width: 60%;
+                    width: 100%;
                     color: #000;
                     word-break: keep-all;
                     line-height: 30px;
@@ -374,19 +383,19 @@ body {
     }
 
     #about {
-        height: 1600px;
+        height: 1200px;
 
         .inner {
             width: 1200px;
             margin: 0 auto;
-            padding-top: 350px;
+            padding-top: 250px;
 
             h2 {
                 @include Eng_title;
                 font-size: 36px;
                 color: #000;
                 letter-spacing: 5px;
-                margin-bottom: 350px;
+                margin-bottom: 250px;
                 text-align: center;
             }
         }

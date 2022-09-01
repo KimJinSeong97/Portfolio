@@ -2,7 +2,7 @@
 
 @import "reset";
 
-@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300&family=Lato:wght@300&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300&family=Lato:wght@100;300&family=Playfair+Display&display=swap');
 
 @mixin Eng_title {
     font-family: 'Playfair Display', serif;
@@ -24,7 +24,7 @@ body {
     overflow-x: hidden;
 
     #intro {
-        height: 1000px;
+        height: 100vh;
         position: relative;
 
         h2 {
@@ -42,7 +42,7 @@ body {
         .left_box {
             position: absolute;
             left: 0;
-            height: 1000px;
+            height: 100vh;
             background-color: #000;
             z-index: 1;
         }
@@ -50,7 +50,7 @@ body {
         .right_box {
             position: absolute;
             right: 0;
-            height: 1000px;
+            height: 100vh;
             background-color: #000;
             z-index: 1;
         }
@@ -118,16 +118,17 @@ body {
             }
 
             .introduce {
+
                 img {
-                    width: 30%;
+                    width: 570px;
                     position: absolute;
-                    left: 15%;
+                    left: 16%;
                     top: 10%;
                 }
 
                 >p {
                     @include Kor_font;
-                    width: 40%;
+                    width: 750px;
                     font-weight: 200;
                     font-size: 33px;
                     word-break: keep-all;
@@ -144,49 +145,162 @@ body {
                     }
                 }
 
-                .strength {
-                    width: 1300px;
-                    display: flex;
-                    justify-content: space-between;
-                    left: 50%;
-                    top: 70%;
-                    transform: translate(-50%, -70%);
+                h3 {
+                    @include Eng_sub_title;
+                    font-weight: 100;
                     position: absolute;
+                    color: #000;
+                    font-size: 150px;
+                    left: -15%;
+                    top: 50%;
+                    width: 100%;
+                    text-align: left;
+                }
 
-                    .positive,
-                    .responsible,
-                    .communicative {
-                        width: 30%;
+                .border_box1,
+                .border_box2 {
+                    width: 0px;
+                    height: 2px;
+                    position: absolute;
+                    top: 70%;
+                    left: 16%;
+                    background-color: #444;
+                    transition: all 1s ease-in-out;
+                }
+
+                h4 {
+                    @include Eng_sub_title;
+                    font-weight: 100;
+                    position: absolute;
+                    color: #000;
+                    font-size: 150px;
+                    right: -15%;
+                    top: 75%;
+                    width: 100%;
+                    text-align: right;
+                }
+
+                .border_box2 {
+                    top: 95%;
+                }
+            }
+        }
+    }
+
+    #aboutme {
+
+        .inner {
+            width: 1200px;
+            height: 2000px;
+            margin: 0 auto;
+            padding-top: 350px;
+            position: relative;
+
+            h2 {
+                @include Eng_title;
+                font-size: 36px;
+                color: #000;
+                letter-spacing: 5px;
+                text-align: center;
+            }
+
+            .strength {
+                width: 1300px;
+                display: flex;
+                justify-content: space-between;
+                left: 50%;
+                top: 30%;
+                transform: translate(-50%, 30%);
+                position: absolute;
+
+                .positive,
+                .responsible,
+                .communicative {
+                    width: 30%;
+                }
+
+                h3 {
+                    @include Eng_sub_title;
+                    color: #444;
+                    margin-bottom: 50px;
+                    letter-spacing: -0.5px;
+                }
+
+                p {
+                    @include Kor_font;
+                    font-weight: 200;
+                    color: #444;
+                    font-size: 18px;
+                    line-height: 150%;
+                    letter-spacing: 0.5px;
+
+                    span {
+                        @include Eng_sub_title;
+                        color: #f0f0f0;
+                        background-color: #444;
                     }
+                }
+
+                h4 {
+                    @include Eng_sub_title;
+                    font-weight: 100;
+                    color: #444;
+                    font-size: 80px;
+                    position: absolute;
+                }
+            }
+
+            .skills {
+                width: 1300px;
+                display: flex;
+                justify-content: space-around;
+                position: absolute;
+                left: 50%;
+                top: 80%;
+                transform: translate(-50%, -80%);
+
+                .skill_name {
+                    width: 50%;
+                    border-right: 1px solid #000;
 
                     h3 {
-                        @include Eng_sub_title;
-                        color: #444;
-                        margin-bottom: 50px;
-                        letter-spacing: -0.5px;
+                        @include Eng_title;
+                        color: #aaa;
+                        font-size: 50px;
+                        letter-spacing: 5px;
+                        text-align: center;
+                        margin-bottom: 10%;
+                        cursor: pointer;
+                    }
+
+                    .bold_font {
+                        color: #000;
+                        font-weight: bold;
+                        text-shadow: 3px 3px 6px #aaa;
+                    }
+                }
+
+                .skill_icon {
+                    width: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+
+                    img {
+                        width: 25%;
+                        margin-bottom: 5%;
+                        box-shadow: 10px 10px 20px #aaa;
                     }
 
                     p {
                         @include Kor_font;
-                        font-weight: 200;
                         color: #444;
-                        font-size: 18px;
-                        line-height: 150%;
+                        font-size: 20px;
+                        text-align: center;
+                        word-break: keep-all;
+                        line-height: 35px;
                         letter-spacing: 0.5px;
-
-                        span {
-                            @include Eng_sub_title;
-                            color: #f0f0f0;
-                            background-color: #444;
-                        }
-                    }
-
-                    h4 {
-                        @include Kor_font;
-                        font-weight: 100;
-                        color: #aaa;
-                        font-size: 200px;
-                        position: absolute;
                     }
                 }
             }
@@ -393,76 +507,6 @@ body {
                         span {
                             margin-right: 12px;
                         }
-                    }
-                }
-            }
-        }
-    }
-
-    #skill {
-        background-color: #f0f0f0;
-
-        .inner {
-            width: 1200px;
-            margin: 0 auto;
-            padding-top: 250px;
-
-            h2 {
-                @include Eng_title;
-                font-size: 36px;
-                color: #000;
-                letter-spacing: 5px;
-                margin-bottom: 250px;
-                text-align: center;
-            }
-
-            .skills {
-                display: flex;
-                justify-content: space-around;
-                padding-bottom: 250px;
-
-                .skill_name {
-                    width: 50%;
-                    border-right: 1px solid #000;
-
-                    h3 {
-                        @include Eng_title;
-                        color: #aaa;
-                        font-size: 50px;
-                        letter-spacing: 5px;
-                        text-align: center;
-                        margin-bottom: 10%;
-                        cursor: pointer;
-                    }
-
-                    .bold_font {
-                        color: #000;
-                        font-weight: bold;
-                        text-shadow: 3px 3px 6px #aaa;
-                    }
-                }
-
-                .skill_icon {
-                    width: 50%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: column;
-
-                    img {
-                        width: 25%;
-                        margin-bottom: 5%;
-                        box-shadow: 10px 10px 20px #aaa;
-                    }
-
-                    p {
-                        @include Kor_font;
-                        color: #444;
-                        font-size: 20px;
-                        text-align: center;
-                        word-break: keep-all;
-                        line-height: 35px;
-                        letter-spacing: 0.5px;
                     }
                 }
             }

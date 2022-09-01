@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300&family=Lato:wght@300&family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300&family=Lato:wght@100;300&family=Playfair+Display&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +19,7 @@ body {
   overflow-x: hidden;
 }
 body #intro {
-  height: 1000px;
+  height: 100vh;
   position: relative;
 }
 body #intro h2 {
@@ -38,14 +38,14 @@ body #intro h2 {
 body #intro .left_box {
   position: absolute;
   left: 0;
-  height: 1000px;
+  height: 100vh;
   background-color: #000;
   z-index: 1;
 }
 body #intro .right_box {
   position: absolute;
   right: 0;
-  height: 1000px;
+  height: 100vh;
   background-color: #000;
   z-index: 1;
 }
@@ -101,15 +101,15 @@ body #intro .bottom_box2 header nav ul li a:hover::after {
   transform: scaleX(1);
 }
 body #intro .bottom_box2 .introduce img {
-  width: 30%;
+  width: 570px;
   position: absolute;
-  left: 15%;
+  left: 16%;
   top: 10%;
 }
 body #intro .bottom_box2 .introduce > p {
   font-family: "Gothic A1", sans-serif;
   letter-spacing: 1.5px;
-  width: 40%;
+  width: 750px;
   font-weight: 200;
   font-size: 33px;
   word-break: keep-all;
@@ -125,28 +125,81 @@ body #intro .bottom_box2 .introduce > p span {
   color: #f0f0f0;
   background-color: #444;
 }
-body #intro .bottom_box2 .introduce .strength {
+body #intro .bottom_box2 .introduce h3 {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1.5px;
+  font-weight: 100;
+  position: absolute;
+  color: #000;
+  font-size: 150px;
+  left: -15%;
+  top: 50%;
+  width: 100%;
+  text-align: left;
+}
+body #intro .bottom_box2 .introduce .border_box1,
+body #intro .bottom_box2 .introduce .border_box2 {
+  width: 0px;
+  height: 2px;
+  position: absolute;
+  top: 70%;
+  left: 16%;
+  background-color: #444;
+  transition: all 1s ease-in-out;
+}
+body #intro .bottom_box2 .introduce h4 {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1.5px;
+  font-weight: 100;
+  position: absolute;
+  color: #000;
+  font-size: 150px;
+  right: -15%;
+  top: 75%;
+  width: 100%;
+  text-align: right;
+}
+body #intro .bottom_box2 .introduce .border_box2 {
+  top: 95%;
+}
+body #aboutme .inner {
+  width: 1200px;
+  height: 2000px;
+  margin: 0 auto;
+  padding-top: 350px;
+  position: relative;
+}
+body #aboutme .inner h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 100;
+  letter-spacing: 1.5px;
+  font-size: 36px;
+  color: #000;
+  letter-spacing: 5px;
+  text-align: center;
+}
+body #aboutme .inner .strength {
   width: 1300px;
   display: flex;
   justify-content: space-between;
   left: 50%;
-  top: 70%;
-  transform: translate(-50%, -70%);
+  top: 30%;
+  transform: translate(-50%, 30%);
   position: absolute;
 }
-body #intro .bottom_box2 .introduce .strength .positive,
-body #intro .bottom_box2 .introduce .strength .responsible,
-body #intro .bottom_box2 .introduce .strength .communicative {
+body #aboutme .inner .strength .positive,
+body #aboutme .inner .strength .responsible,
+body #aboutme .inner .strength .communicative {
   width: 30%;
 }
-body #intro .bottom_box2 .introduce .strength h3 {
+body #aboutme .inner .strength h3 {
   font-family: "Lato", sans-serif;
   letter-spacing: 1.5px;
   color: #444;
   margin-bottom: 50px;
   letter-spacing: -0.5px;
 }
-body #intro .bottom_box2 .introduce .strength p {
+body #aboutme .inner .strength p {
   font-family: "Gothic A1", sans-serif;
   letter-spacing: 1.5px;
   font-weight: 200;
@@ -155,19 +208,70 @@ body #intro .bottom_box2 .introduce .strength p {
   line-height: 150%;
   letter-spacing: 0.5px;
 }
-body #intro .bottom_box2 .introduce .strength p span {
+body #aboutme .inner .strength p span {
   font-family: "Lato", sans-serif;
   letter-spacing: 1.5px;
   color: #f0f0f0;
   background-color: #444;
 }
-body #intro .bottom_box2 .introduce .strength h4 {
-  font-family: "Gothic A1", sans-serif;
+body #aboutme .inner .strength h4 {
+  font-family: "Lato", sans-serif;
   letter-spacing: 1.5px;
   font-weight: 100;
-  color: #aaa;
-  font-size: 200px;
+  color: #444;
+  font-size: 80px;
   position: absolute;
+}
+body #aboutme .inner .skills {
+  width: 1300px;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translate(-50%, -80%);
+}
+body #aboutme .inner .skills .skill_name {
+  width: 50%;
+  border-right: 1px solid #000;
+}
+body #aboutme .inner .skills .skill_name h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 100;
+  letter-spacing: 1.5px;
+  color: #aaa;
+  font-size: 50px;
+  letter-spacing: 5px;
+  text-align: center;
+  margin-bottom: 10%;
+  cursor: pointer;
+}
+body #aboutme .inner .skills .skill_name .bold_font {
+  color: #000;
+  font-weight: bold;
+  text-shadow: 3px 3px 6px #aaa;
+}
+body #aboutme .inner .skills .skill_icon {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body #aboutme .inner .skills .skill_icon img {
+  width: 25%;
+  margin-bottom: 5%;
+  box-shadow: 10px 10px 20px #aaa;
+}
+body #aboutme .inner .skills .skill_icon p {
+  font-family: "Gothic A1", sans-serif;
+  letter-spacing: 1.5px;
+  color: #444;
+  font-size: 20px;
+  text-align: center;
+  word-break: keep-all;
+  line-height: 35px;
+  letter-spacing: 0.5px;
 }
 body #project {
   background-color: #000;
@@ -397,71 +501,6 @@ body #project .inner .baskinrobbins .information .skill {
 body #project .inner .talesweaver .information .skill span,
 body #project .inner .baskinrobbins .information .skill span {
   margin-right: 12px;
-}
-body #skill {
-  background-color: #f0f0f0;
-}
-body #skill .inner {
-  width: 1200px;
-  margin: 0 auto;
-  padding-top: 250px;
-}
-body #skill .inner h2 {
-  font-family: "Playfair Display", serif;
-  font-weight: 100;
-  letter-spacing: 1.5px;
-  font-size: 36px;
-  color: #000;
-  letter-spacing: 5px;
-  margin-bottom: 250px;
-  text-align: center;
-}
-body #skill .inner .skills {
-  display: flex;
-  justify-content: space-around;
-  padding-bottom: 250px;
-}
-body #skill .inner .skills .skill_name {
-  width: 50%;
-  border-right: 1px solid #000;
-}
-body #skill .inner .skills .skill_name h3 {
-  font-family: "Playfair Display", serif;
-  font-weight: 100;
-  letter-spacing: 1.5px;
-  color: #aaa;
-  font-size: 50px;
-  letter-spacing: 5px;
-  text-align: center;
-  margin-bottom: 10%;
-  cursor: pointer;
-}
-body #skill .inner .skills .skill_name .bold_font {
-  color: #000;
-  font-weight: bold;
-  text-shadow: 3px 3px 6px #aaa;
-}
-body #skill .inner .skills .skill_icon {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-body #skill .inner .skills .skill_icon img {
-  width: 25%;
-  margin-bottom: 5%;
-  box-shadow: 10px 10px 20px #aaa;
-}
-body #skill .inner .skills .skill_icon p {
-  font-family: "Gothic A1", sans-serif;
-  letter-spacing: 1.5px;
-  color: #444;
-  font-size: 20px;
-  text-align: center;
-  word-break: keep-all;
-  line-height: 35px;
-  letter-spacing: 0.5px;
 }
 body #contact {
   height: 1200px;

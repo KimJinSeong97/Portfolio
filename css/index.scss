@@ -212,6 +212,7 @@ body {
                 top: 30%;
                 transform: translate(-50%, 30%);
                 position: absolute;
+                perspective: 200px;
 
                 .positive,
                 .responsible,
@@ -224,6 +225,30 @@ body {
                     color: #444;
                     margin-bottom: 50px;
                     letter-spacing: -0.5px;
+                    animation: flip_text 1s ease-out infinite;
+                    font-size: 100px;
+                    transform-origin: 60% 60%;
+                }
+
+                @keyframes flip_text {
+                    0% {
+                        transform: rotateX(0deg);
+
+                    }
+
+                    100% {
+                        transform: rotateX(90deg)
+                    }
+                }
+
+                @keyframes flip_text2 {
+                    0% {
+                        transform: rotateX(90deg);
+                    }
+
+                    100% {
+                        transform: rotateX(360deg);
+                    }
                 }
 
                 p {
@@ -233,6 +258,8 @@ body {
                     font-size: 18px;
                     line-height: 150%;
                     letter-spacing: 0.5px;
+                    animation: flip_text2 5s ease-out infinite;
+                    transform-origin: 60% 60%;
 
                     span {
                         @include Eng_sub_title;
@@ -333,7 +360,7 @@ body {
                 margin-bottom: 200px;
                 position: relative;
                 opacity: 0;
-                transform: translateY(250px);
+                transform: translateX(-750px);
                 transition: all 1s ease-in-out;
 
                 .num {
@@ -427,7 +454,7 @@ body {
                 margin-bottom: 200px;
                 position: relative;
                 opacity: 0;
-                transform: translateY(250px);
+                transform: translateX(750px);
                 transition: all 1s ease-in-out;
 
                 .num {
@@ -515,6 +542,7 @@ body {
 
     #contact {
         height: 1200px;
+        color: #000;
 
         .inner {
             width: 1200px;

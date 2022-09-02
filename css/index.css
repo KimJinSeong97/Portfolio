@@ -186,6 +186,7 @@ body #aboutme .inner .strength {
   top: 30%;
   transform: translate(-50%, 30%);
   position: absolute;
+  perspective: 200px;
 }
 body #aboutme .inner .strength .positive,
 body #aboutme .inner .strength .responsible,
@@ -198,6 +199,42 @@ body #aboutme .inner .strength h3 {
   color: #444;
   margin-bottom: 50px;
   letter-spacing: -0.5px;
+  -webkit-animation: flip_text 1s ease-out infinite;
+          animation: flip_text 1s ease-out infinite;
+  font-size: 100px;
+  transform-origin: 60% 60%;
+}
+@-webkit-keyframes flip_text {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(90deg);
+  }
+}
+@keyframes flip_text {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(90deg);
+  }
+}
+@-webkit-keyframes flip_text2 {
+  0% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+@keyframes flip_text2 {
+  0% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
 }
 body #aboutme .inner .strength p {
   font-family: "Gothic A1", sans-serif;
@@ -207,6 +244,9 @@ body #aboutme .inner .strength p {
   font-size: 18px;
   line-height: 150%;
   letter-spacing: 0.5px;
+  -webkit-animation: flip_text2 5s ease-out infinite;
+          animation: flip_text2 5s ease-out infinite;
+  transform-origin: 60% 60%;
 }
 body #aboutme .inner .strength p span {
   font-family: "Lato", sans-serif;
@@ -300,7 +340,7 @@ body #project .inner .applemusic {
   margin-bottom: 200px;
   position: relative;
   opacity: 0;
-  transform: translateY(250px);
+  transform: translateX(-750px);
   transition: all 1s ease-in-out;
 }
 body #project .inner .shure .num,
@@ -412,7 +452,7 @@ body #project .inner .baskinrobbins {
   margin-bottom: 200px;
   position: relative;
   opacity: 0;
-  transform: translateY(250px);
+  transform: translateX(750px);
   transition: all 1s ease-in-out;
 }
 body #project .inner .talesweaver .num,
@@ -504,6 +544,7 @@ body #project .inner .baskinrobbins .information .skill span {
 }
 body #contact {
   height: 1200px;
+  color: #000;
 }
 body #contact .inner {
   width: 1200px;

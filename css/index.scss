@@ -2,7 +2,7 @@
 
 @import "reset";
 
-@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300&family=Lato:wght@100;300&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;500&family=Lato:wght@100;300;700&family=Playfair+Display&display=swap');
 
 @mixin Eng_title {
     font-family: 'Playfair Display', serif;
@@ -24,7 +24,7 @@ body {
     overflow-x: hidden;
 
     #intro {
-        height: 100vh;
+        height: 150vh;
         position: relative;
 
         h2 {
@@ -33,16 +33,16 @@ body {
             color: #000;
             text-align: center;
             position: absolute;
-            top: 50%;
+            top: 25%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -25%);
             z-index: 3;
         }
 
         .left_box {
             position: absolute;
             left: 0;
-            height: 100vh;
+            height: 150vh;
             background-color: #000;
             z-index: 1;
         }
@@ -50,7 +50,7 @@ body {
         .right_box {
             position: absolute;
             right: 0;
-            height: 100vh;
+            height: 150vh;
             background-color: #000;
             z-index: 1;
         }
@@ -119,69 +119,93 @@ body {
 
             .introduce {
 
-                img {
-                    width: 570px;
-                    position: absolute;
-                    left: 16%;
-                    top: 10%;
-                }
+                .introduce_top {
+                    width: 1300px;
+                    margin: 0 auto;
+                    display: flex;
+                    justify-content: space-between;
+                    padding-top: 250px;
 
-                >p {
-                    @include Kor_font;
-                    width: 750px;
-                    font-weight: 200;
-                    font-size: 33px;
-                    word-break: keep-all;
-                    position: absolute;
-                    right: 12.5%;
-                    top: 12.5%;
-                    color: #444;
-                    line-height: 150%;
-
-                    span {
-                        @include Eng_sub_title;
-                        color: #f0f0f0;
-                        background-color: #444;
+                    p {
+                        width: 27.5%;
+                        color: #000;
+                        word-break: keep-all;
                     }
                 }
 
-                h3 {
-                    @include Eng_sub_title;
-                    font-weight: 100;
-                    position: absolute;
-                    color: #000;
-                    font-size: 150px;
-                    left: -15%;
-                    top: 50%;
-                    width: 100%;
-                    text-align: left;
+                .introduce_center {
+                    h3 {
+                        @include Eng_sub_title;
+                        font-weight: 100;
+                        position: absolute;
+                        color: #444;
+                        font-size: 150px;
+                        left: -17.5%;
+                        top: 32.5%;
+                        width: 100%;
+                        text-align: left;
+                    }
+
+                    .intro_underline1,
+                    .intro_underline2 {
+                        width: 0px;
+                        height: 2px;
+                        position: absolute;
+                        top: 45%;
+                        left: 16%;
+                        background-color: #aaa;
+                        transition: all 1s ease-in-out;
+                    }
+
+                    h4 {
+                        @include Eng_sub_title;
+                        font-weight: 100;
+                        position: absolute;
+                        color: #444;
+                        font-size: 150px;
+                        right: -17.5%;
+                        top: 50%;
+                        width: 100%;
+                        text-align: right;
+                    }
+
+                    .intro_underline2 {
+                        top: 62.5%;
+                    }
                 }
 
-                .border_box1,
-                .border_box2 {
-                    width: 0px;
-                    height: 2px;
-                    position: absolute;
-                    top: 70%;
-                    left: 16%;
-                    background-color: #444;
-                    transition: all 1s ease-in-out;
-                }
+                .introduce_btm {
+                    opacity: 0;
+                    transition: all 2s ease-in-out;
 
-                h4 {
-                    @include Eng_sub_title;
-                    font-weight: 100;
-                    position: absolute;
-                    color: #000;
-                    font-size: 150px;
-                    right: -15%;
-                    top: 75%;
-                    width: 100%;
-                    text-align: right;
-                }
+                    h5 {
+                        @include Eng_sub_title;
+                        font-weight: 600;
+                        font-size: 60px;
+                        position: absolute;
+                        color: #000;
+                        left: 16%;
+                        bottom: 22.5%;
+                    }
 
-                .border_box2 {
-                    top: 95%;
+                    p {
+                        @include Kor_font;
+                        font-weight: 300;
+                        font-size: 18px;
+                        position: absolute;
+                        color: #000;
+                        left: 16%;
+                        bottom: 10%;
+                        width: 25%;
+                        word-break: keep-all;
+                    }
+
+                    .my_img {
+                        width: 650px;
+                        position: absolute;
+                        right: 15.5%;
+                        bottom: 4.5%;
+                    }
                 }
             }
         }
@@ -190,139 +214,77 @@ body {
     #aboutme {
 
         .inner {
-            width: 1200px;
+            width: 1300px;
             height: 2000px;
             margin: 0 auto;
-            padding-top: 350px;
             position: relative;
 
             h2 {
-                @include Eng_title;
-                font-size: 36px;
-                color: #000;
+                @include Eng_sub_title;
+                font-weight: 200;
+                font-size: 150px;
+                color: #444;
                 letter-spacing: 5px;
-                text-align: center;
+                width: 100%;
+                position: inherit;
+                left: -950px;
+                word-break: keep-all;
             }
 
-            .strength {
-                width: 1300px;
-                display: flex;
-                justify-content: space-between;
+            .aboutme_underline {
+                width: 0px;
+                height: 2px;
+                background-color: #aaa;
+                transition: all 1s ease-in-out;
+                margin-bottom: 100px;
+            }
 
-                .scene {
-                    width: 1300px;
-                    height: 130px;
-                    perspective: 600px;
-                }
+            .flip_text_change {
+                width: 100%;
+                height: 50px;
+                perspective: 600px;
 
-                .card {
-                    width: 100%;
-                    height: 100%;
+                .flip {
+                    height: 50px;
                     position: relative;
-                    transition: transform 1s;
+                    transition: transform .5s;
                     transform-style: preserve-3d;
+                    margin-top: 40px;
+                    margin-bottom: 40px;
                 }
 
-                .card__face {
+                .flip_face {
                     position: absolute;
                     width: 100%;
                     height: 100%;
                     backface-visibility: hidden;
                     color: #000;
-                    text-align: center;
-                    font-size: 2em;
-                    line-height: 130px;
+                    line-height: 50px;
 
-                    &--back {
+                    &_eng {
+                        @include Eng_sub_title;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        letter-spacing: -1px;
+                        font-size: 48px;
+                    }
+
+                    &_kor {
+                        @include Kor_font;
+                        font-weight: 500;
                         transform: rotateX(180deg);
+                        letter-spacing: -2px;
+                        font-size: 44px;
                     }
                 }
-
-                .card.is-flipped {
-                    transform: rotateX(-180deg);
-                }
-
-                // .positive,
-                // .responsible,
-                // .communicative {
-                //     width: 30%;
-                // }
-
-                // h3 {
-                //     @include Eng_sub_title;
-                //     color: #444;
-                //     margin-bottom: 50px;
-                //     letter-spacing: -0.5px;
-                // }
-
-                // p {
-                //     @include Kor_font;
-                //     font-weight: 200;
-                //     color: #444;
-                //     font-size: 18px;
-                //     line-height: 150%;
-                //     letter-spacing: 0.5px;
-
-                //     span {
-                //         @include Eng_sub_title;
-                //         color: #f0f0f0;
-                //         background-color: #444;
-                //     }
-                // }
             }
 
             .skills {
                 width: 1300px;
-                display: flex;
-                justify-content: space-around;
-                position: absolute;
-                left: 50%;
-                top: 80%;
-                transform: translate(-50%, -80%);
 
-                .skill_name {
-                    width: 50%;
-                    border-right: 1px solid #000;
-
-                    h3 {
-                        @include Eng_title;
-                        color: #aaa;
-                        font-size: 50px;
-                        letter-spacing: 5px;
-                        text-align: center;
-                        margin-bottom: 10%;
-                        cursor: pointer;
-                    }
-
-                    .bold_font {
-                        color: #000;
-                        font-weight: bold;
-                        text-shadow: 3px 3px 6px #aaa;
-                    }
-                }
-
-                .skill_icon {
-                    width: 50%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: column;
-
-                    img {
-                        width: 25%;
-                        margin-bottom: 5%;
-                        box-shadow: 10px 10px 20px #aaa;
-                    }
-
-                    p {
-                        @include Kor_font;
-                        color: #444;
-                        font-size: 20px;
-                        text-align: center;
-                        word-break: keep-all;
-                        line-height: 35px;
-                        letter-spacing: 0.5px;
-                    }
+                img {
+                    position: absolute;
+                    top: 55%;
                 }
             }
         }
@@ -333,18 +295,26 @@ body {
         padding-bottom: 450px;
 
         .inner {
-            width: 1200px;
+            width: 1300px;
             height: 5000px;
             margin: 0 auto;
-            padding-top: 350px;
 
             h2 {
-                @include Eng_title;
-                font-size: 36px;
-                color: #fff;
+                @include Eng_sub_title;
+                font-weight: 200;
+                font-size: 150px;
                 letter-spacing: 5px;
-                margin-bottom: 350px;
-                text-align: center;
+                width: 100%;
+                position: inherit;
+                word-break: keep-all;
+            }
+
+            .projects_underline {
+                width: 100%;
+                height: 2px;
+                background-color: #fff;
+                transition: all 1s ease-in-out;
+                margin-bottom: 300px;
             }
 
             .shure,
@@ -539,17 +509,26 @@ body {
         color: #000;
 
         .inner {
-            width: 1200px;
+            width: 1300px;
             margin: 0 auto;
-            padding-top: 250px;
 
             h2 {
-                @include Eng_title;
-                font-size: 36px;
-                color: #000;
+                @include Eng_sub_title;
+                font-weight: 200;
+                font-size: 150px;
                 letter-spacing: 5px;
-                margin-bottom: 250px;
-                text-align: center;
+                color: #444;
+                width: 100%;
+                position: inherit;
+                word-break: keep-all;
+            }
+
+            .contact_underline {
+                width: 100%;
+                height: 2px;
+                background-color: #aaa;
+                transition: all 1s ease-in-out;
+                margin-bottom: 300px;
             }
         }
     }

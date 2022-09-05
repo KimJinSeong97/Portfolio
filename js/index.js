@@ -11,23 +11,23 @@ intro.fromTo('.left_box', 1.25, { x: -200 + 'vw' }, { x: 0 + 'vw', width: 50 + '
 intro.fromTo('.right_box', 1.25, { x: 200 + 'vw' }, { x: 0 + 'vw', width: 50 + 'vw', ease: 'power3.out' }, 0.5);
 intro.fromTo('#intro h2', 2, { color: 'black' }, { color: 'white', ease: 'power0.out' }, 0.5);
 intro.to('#intro h2', 1, { color: 'black', ease: 'power0.out' }, 1.75);
-intro.fromTo('.bottom_box', 1.25, { y: 0 + 'vh' }, { y: 0 + 'vh', height: 100 + 'vh', ease: 'expo.out' }, 1.75);
+intro.fromTo('.bottom_box', 1.25, { y: 0 + 'vh' }, { y: 0 + 'vh', height: 150 + 'vh', ease: 'expo.out' }, 1.75);
 intro.fromTo('#intro h2', 1, { y: 0, opacity: 1 }, { y: -50, opacity: 0 }, 2.5);
-intro.fromTo('.bottom_box2', 1.25, { y: 0 + 'vh' }, { y: 0 + 'vh', height: 100 + 'vh', ease: 'expo.out' }, 3.5);
+intro.fromTo('.bottom_box2', 1.25, { y: 0 + 'vh' }, { y: 0 + 'vh', height: 150 + 'vh', ease: 'expo.out' }, 3.5);
 intro.fromTo('header', 0.5, { y: 25, opacity: 0 }, { y: 0, opacity: 1 }, 4);
 intro.fromTo('.introduce h3', 0.5, { y: 20, opacity: 0 }, { y: 0, opacity: 1 }, 4.5);
-intro.fromTo('.introduce img', 0.5, { y: 20, opacity: 0 }, { y: 0, opacity: 1 }, 5);
-intro.fromTo('.introduce h4', 0.5, { y: 20, opacity: 0 }, { y: 0, opacity: 1 }, 5.5);
-intro.fromTo('.introduce>p', 0.5, { y: 20, opacity: 0 }, { y: 0, opacity: 1 }, 6);
+intro.fromTo('.introduce h4', 0.5, { y: 20, opacity: 0 }, { y: 0, opacity: 1 }, 5);
 
 //인트로 스크롤시 글씨 좌,우로 움직임
 window.addEventListener('scroll', function () {
     let scroll_value = window.scrollY;
     let intro_comment1 = document.querySelector('.introduce h3');
     let intro_comment2 = document.querySelector('.introduce h4');
+    let aboutme = document.querySelector('#aboutme h2');
 
-    intro_comment1.style.left = (scroll_value * 0.075) - 15 + '%';
-    intro_comment2.style.right = (scroll_value * 0.075) - 15 + '%';
+    intro_comment1.style.left = (scroll_value * 0.05) - 17.5 + '%';
+    intro_comment2.style.right = (scroll_value * 0.05) - 17.5 + '%';
+    aboutme.style.marginLeft = (scroll_value * 0.9) + 'px';
 })
 
 //Skill 마우스오버하면 이미지, 내용 바뀜
@@ -65,29 +65,44 @@ $(function () {
 //스크롤내리면 프로젝트가 나타남
 $(window).scroll(function () {
     var scrollTop = $(this).scrollTop();
+    var scroll_aboutme = $('#aboutme .inner').offset().top;
     var scroll_project = $('#project .inner').offset().top;
 
-    //인트로 글씨 언더라인 생성 
-    $('.border_box1, .border_box2').css('width', 1300);
 
-    if (scrollTop > scroll_project + 0) {
+    //인트로 글씨 언더라인 생성 
+    $('.intro_underline1, .intro_underline2').css('width', 1300);
+    $('.introduce_btm').css('opacity', 1);
+
+    if (scrollTop > scroll_aboutme - 600) {
+        $('.aboutme_underline').css('width', 1300)
+    }
+
+    //프로젝트 스크롤 이벤트
+    if (scrollTop > scroll_project + -200) {
         $('.shure').css('transform', 'translate(0px)').css({ opacity: 1 });
     }
-    if (scrollTop > scroll_project + 1000) {
+    if (scrollTop > scroll_project + 800) {
         $('.talesweaver').css('transform', 'translate(0px)').css({ opacity: 1 });
     }
-    if (scrollTop > scroll_project + 2000) {
+    if (scrollTop > scroll_project + 1800) {
         $('.millie').css('transform', 'translate(0px)').css({ opacity: 1 });
     }
-    if (scrollTop > scroll_project + 3000) {
+    if (scrollTop > scroll_project + 2800) {
         $('.baskinrobbins').css('transform', 'translate(0px)').css({ opacity: 1 });
     }
-    if (scrollTop > scroll_project + 4000) {
+    if (scrollTop > scroll_project + 3800) {
         $('.applemusic').css('transform', 'translate(0px)').css({ opacity: 1 });
     }
 })
 
-var card = document.querySelector('.card');
-card.addEventListener( 'click', function() {
-  card.classList.toggle('is-flipped');
-});
+var flip = document.getElementsByClassName('flip');
+
+for (var i = 0; i < flip.length; i++) {
+
+    flip[i].addEventListener('mouseover', function () {
+        this.style.transform = 'rotateX(-180deg)'
+    })
+    flip[i].addEventListener('mouseout', function () {
+        this.style.transform = 'rotateX(0deg)'
+    })
+}

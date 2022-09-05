@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300&family=Lato:wght@100;300&family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;500&family=Lato:wght@100;300;700&family=Playfair+Display&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +19,7 @@ body {
   overflow-x: hidden;
 }
 body #intro {
-  height: 100vh;
+  height: 150vh;
   position: relative;
 }
 body #intro h2 {
@@ -30,22 +30,22 @@ body #intro h2 {
   color: #000;
   text-align: center;
   position: absolute;
-  top: 50%;
+  top: 25%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -25%);
   z-index: 3;
 }
 body #intro .left_box {
   position: absolute;
   left: 0;
-  height: 100vh;
+  height: 150vh;
   background-color: #000;
   z-index: 1;
 }
 body #intro .right_box {
   position: absolute;
   right: 0;
-  height: 100vh;
+  height: 150vh;
   background-color: #000;
   z-index: 1;
 }
@@ -100,188 +100,182 @@ body #intro .bottom_box2 header nav ul li a::after {
 body #intro .bottom_box2 header nav ul li a:hover::after {
   transform: scaleX(1);
 }
-body #intro .bottom_box2 .introduce img {
-  width: 570px;
-  position: absolute;
-  left: 16%;
-  top: 10%;
+body #intro .bottom_box2 .introduce .introduce_top {
+  width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 250px;
 }
-body #intro .bottom_box2 .introduce > p {
-  font-family: "Gothic A1", sans-serif;
-  letter-spacing: 1.5px;
-  width: 750px;
-  font-weight: 200;
-  font-size: 33px;
+body #intro .bottom_box2 .introduce .introduce_top p {
+  width: 27.5%;
+  color: #000;
   word-break: keep-all;
-  position: absolute;
-  right: 12.5%;
-  top: 12.5%;
-  color: #444;
-  line-height: 150%;
 }
-body #intro .bottom_box2 .introduce > p span {
-  font-family: "Lato", sans-serif;
-  letter-spacing: 1.5px;
-  color: #f0f0f0;
-  background-color: #444;
-}
-body #intro .bottom_box2 .introduce h3 {
+body #intro .bottom_box2 .introduce .introduce_center h3 {
   font-family: "Lato", sans-serif;
   letter-spacing: 1.5px;
   font-weight: 100;
   position: absolute;
-  color: #000;
+  color: #444;
   font-size: 150px;
-  left: -15%;
-  top: 50%;
+  left: -17.5%;
+  top: 32.5%;
   width: 100%;
   text-align: left;
 }
-body #intro .bottom_box2 .introduce .border_box1,
-body #intro .bottom_box2 .introduce .border_box2 {
+body #intro .bottom_box2 .introduce .introduce_center .intro_underline1,
+body #intro .bottom_box2 .introduce .introduce_center .intro_underline2 {
   width: 0px;
   height: 2px;
   position: absolute;
-  top: 70%;
+  top: 45%;
   left: 16%;
-  background-color: #444;
+  background-color: #aaa;
   transition: all 1s ease-in-out;
 }
-body #intro .bottom_box2 .introduce h4 {
+body #intro .bottom_box2 .introduce .introduce_center h4 {
   font-family: "Lato", sans-serif;
   letter-spacing: 1.5px;
   font-weight: 100;
   position: absolute;
-  color: #000;
+  color: #444;
   font-size: 150px;
-  right: -15%;
-  top: 75%;
+  right: -17.5%;
+  top: 50%;
   width: 100%;
   text-align: right;
 }
-body #intro .bottom_box2 .introduce .border_box2 {
-  top: 95%;
+body #intro .bottom_box2 .introduce .introduce_center .intro_underline2 {
+  top: 62.5%;
+}
+body #intro .bottom_box2 .introduce .introduce_btm {
+  opacity: 0;
+  transition: all 2s ease-in-out;
+}
+body #intro .bottom_box2 .introduce .introduce_btm h5 {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  font-size: 60px;
+  position: absolute;
+  color: #000;
+  left: 16%;
+  bottom: 22.5%;
+}
+body #intro .bottom_box2 .introduce .introduce_btm p {
+  font-family: "Gothic A1", sans-serif;
+  letter-spacing: 1.5px;
+  font-weight: 300;
+  font-size: 18px;
+  position: absolute;
+  color: #000;
+  left: 16%;
+  bottom: 10%;
+  width: 25%;
+  word-break: keep-all;
+}
+body #intro .bottom_box2 .introduce .introduce_btm .my_img {
+  width: 650px;
+  position: absolute;
+  right: 15.5%;
+  bottom: 4.5%;
 }
 body #aboutme .inner {
-  width: 1200px;
+  width: 1300px;
   height: 2000px;
   margin: 0 auto;
-  padding-top: 350px;
   position: relative;
 }
 body #aboutme .inner h2 {
-  font-family: "Playfair Display", serif;
-  font-weight: 100;
+  font-family: "Lato", sans-serif;
   letter-spacing: 1.5px;
-  font-size: 36px;
-  color: #000;
+  font-weight: 200;
+  font-size: 150px;
+  color: #444;
   letter-spacing: 5px;
-  text-align: center;
+  width: 100%;
+  position: inherit;
+  left: -950px;
+  word-break: keep-all;
 }
-body #aboutme .inner .strength {
-  width: 1300px;
-  display: flex;
-  justify-content: space-between;
+body #aboutme .inner .aboutme_underline {
+  width: 0px;
+  height: 2px;
+  background-color: #aaa;
+  transition: all 1s ease-in-out;
+  margin-bottom: 100px;
 }
-body #aboutme .inner .strength .scene {
-  width: 1300px;
-  height: 130px;
+body #aboutme .inner .flip_text_change {
+  width: 100%;
+  height: 50px;
   perspective: 600px;
 }
-body #aboutme .inner .strength .card {
-  width: 100%;
-  height: 100%;
+body #aboutme .inner .flip_text_change .flip {
+  height: 50px;
   position: relative;
-  transition: transform 1s;
+  transition: transform 0.5s;
   transform-style: preserve-3d;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
-body #aboutme .inner .strength .card__face {
+body #aboutme .inner .flip_text_change .flip_face {
   position: absolute;
   width: 100%;
   height: 100%;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   color: #000;
-  text-align: center;
-  font-size: 2em;
-  line-height: 130px;
+  line-height: 50px;
 }
-body #aboutme .inner .strength .card__face--back {
+body #aboutme .inner .flip_text_change .flip_face_eng {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-size: 48px;
+}
+body #aboutme .inner .flip_text_change .flip_face_kor {
+  font-family: "Gothic A1", sans-serif;
+  letter-spacing: 1.5px;
+  font-weight: 500;
   transform: rotateX(180deg);
-}
-body #aboutme .inner .strength .card.is-flipped {
-  transform: rotateX(-180deg);
+  letter-spacing: -2px;
+  font-size: 44px;
 }
 body #aboutme .inner .skills {
   width: 1300px;
-  display: flex;
-  justify-content: space-around;
+}
+body #aboutme .inner .skills img {
   position: absolute;
-  left: 50%;
-  top: 80%;
-  transform: translate(-50%, -80%);
-}
-body #aboutme .inner .skills .skill_name {
-  width: 50%;
-  border-right: 1px solid #000;
-}
-body #aboutme .inner .skills .skill_name h3 {
-  font-family: "Playfair Display", serif;
-  font-weight: 100;
-  letter-spacing: 1.5px;
-  color: #aaa;
-  font-size: 50px;
-  letter-spacing: 5px;
-  text-align: center;
-  margin-bottom: 10%;
-  cursor: pointer;
-}
-body #aboutme .inner .skills .skill_name .bold_font {
-  color: #000;
-  font-weight: bold;
-  text-shadow: 3px 3px 6px #aaa;
-}
-body #aboutme .inner .skills .skill_icon {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-body #aboutme .inner .skills .skill_icon img {
-  width: 25%;
-  margin-bottom: 5%;
-  box-shadow: 10px 10px 20px #aaa;
-}
-body #aboutme .inner .skills .skill_icon p {
-  font-family: "Gothic A1", sans-serif;
-  letter-spacing: 1.5px;
-  color: #444;
-  font-size: 20px;
-  text-align: center;
-  word-break: keep-all;
-  line-height: 35px;
-  letter-spacing: 0.5px;
+  top: 55%;
 }
 body #project {
   background-color: #000;
   padding-bottom: 450px;
 }
 body #project .inner {
-  width: 1200px;
+  width: 1300px;
   height: 5000px;
   margin: 0 auto;
-  padding-top: 350px;
 }
 body #project .inner h2 {
-  font-family: "Playfair Display", serif;
-  font-weight: 100;
+  font-family: "Lato", sans-serif;
   letter-spacing: 1.5px;
-  font-size: 36px;
-  color: #fff;
+  font-weight: 200;
+  font-size: 150px;
   letter-spacing: 5px;
-  margin-bottom: 350px;
-  text-align: center;
+  width: 100%;
+  position: inherit;
+  word-break: keep-all;
+}
+body #project .inner .projects_underline {
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transition: all 1s ease-in-out;
+  margin-bottom: 300px;
 }
 body #project .inner .shure,
 body #project .inner .millie,
@@ -497,17 +491,24 @@ body #contact {
   color: #000;
 }
 body #contact .inner {
-  width: 1200px;
+  width: 1300px;
   margin: 0 auto;
-  padding-top: 250px;
 }
 body #contact .inner h2 {
-  font-family: "Playfair Display", serif;
-  font-weight: 100;
+  font-family: "Lato", sans-serif;
   letter-spacing: 1.5px;
-  font-size: 36px;
-  color: #000;
+  font-weight: 200;
+  font-size: 150px;
   letter-spacing: 5px;
-  margin-bottom: 250px;
-  text-align: center;
+  color: #444;
+  width: 100%;
+  position: inherit;
+  word-break: keep-all;
+}
+body #contact .inner .contact_underline {
+  width: 100%;
+  height: 2px;
+  background-color: #aaa;
+  transition: all 1s ease-in-out;
+  margin-bottom: 300px;
 }

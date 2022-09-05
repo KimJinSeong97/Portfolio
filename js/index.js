@@ -7,8 +7,8 @@ var intro = gsap.timeline({
 });
 
 intro.fromTo('#intro h2', 1, { y: 50, opacity: 0 }, { y: 0, opacity: 1 }, 0);
-intro.fromTo('.left_box', 1.25, { x: -200 + 'vw' }, { x: 0 + 'vw', width: 49.7 + 'vw', ease: 'power3.out' }, 0.5);
-intro.fromTo('.right_box', 1.25, { x: 200 + 'vw' }, { x: 0 + 'vw', width: 49.7 + 'vw', ease: 'power3.out' }, 0.5);
+intro.fromTo('.left_box', 1.25, { x: -200 + 'vw' }, { x: 0 + 'vw', width: 50 + 'vw', ease: 'power3.out' }, 0.5);
+intro.fromTo('.right_box', 1.25, { x: 200 + 'vw' }, { x: 0 + 'vw', width: 50 + 'vw', ease: 'power3.out' }, 0.5);
 intro.fromTo('#intro h2', 2, { color: 'black' }, { color: 'white', ease: 'power0.out' }, 0.5);
 intro.to('#intro h2', 1, { color: 'black', ease: 'power0.out' }, 1.75);
 intro.fromTo('.bottom_box', 1.25, { y: 0 + 'vh' }, { y: 0 + 'vh', height: 100 + 'vh', ease: 'expo.out' }, 1.75);
@@ -86,3 +86,8 @@ $(window).scroll(function () {
         $('.applemusic').css('transform', 'translate(0px)').css({ opacity: 1 });
     }
 })
+
+var card = document.querySelector('.card');
+card.addEventListener( 'click', function() {
+  card.classList.toggle('is-flipped');
+});

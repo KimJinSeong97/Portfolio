@@ -182,85 +182,35 @@ body #aboutme .inner .strength {
   width: 1300px;
   display: flex;
   justify-content: space-between;
-  left: 50%;
-  top: 30%;
-  transform: translate(-50%, 30%);
+}
+body #aboutme .inner .strength .scene {
+  width: 1300px;
+  height: 130px;
+  perspective: 600px;
+}
+body #aboutme .inner .strength .card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+body #aboutme .inner .strength .card__face {
   position: absolute;
-  perspective: 200px;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  color: #000;
+  text-align: center;
+  font-size: 2em;
+  line-height: 130px;
 }
-body #aboutme .inner .strength .positive,
-body #aboutme .inner .strength .responsible,
-body #aboutme .inner .strength .communicative {
-  width: 30%;
+body #aboutme .inner .strength .card__face--back {
+  transform: rotateX(180deg);
 }
-body #aboutme .inner .strength h3 {
-  font-family: "Lato", sans-serif;
-  letter-spacing: 1.5px;
-  color: #444;
-  margin-bottom: 50px;
-  letter-spacing: -0.5px;
-  -webkit-animation: flip_text 1s ease-out infinite;
-          animation: flip_text 1s ease-out infinite;
-  font-size: 100px;
-  transform-origin: 60% 60%;
-}
-@-webkit-keyframes flip_text {
-  0% {
-    transform: rotateX(0deg);
-  }
-  100% {
-    transform: rotateX(90deg);
-  }
-}
-@keyframes flip_text {
-  0% {
-    transform: rotateX(0deg);
-  }
-  100% {
-    transform: rotateX(90deg);
-  }
-}
-@-webkit-keyframes flip_text2 {
-  0% {
-    transform: rotateX(90deg);
-  }
-  100% {
-    transform: rotateX(360deg);
-  }
-}
-@keyframes flip_text2 {
-  0% {
-    transform: rotateX(90deg);
-  }
-  100% {
-    transform: rotateX(360deg);
-  }
-}
-body #aboutme .inner .strength p {
-  font-family: "Gothic A1", sans-serif;
-  letter-spacing: 1.5px;
-  font-weight: 200;
-  color: #444;
-  font-size: 18px;
-  line-height: 150%;
-  letter-spacing: 0.5px;
-  -webkit-animation: flip_text2 5s ease-out infinite;
-          animation: flip_text2 5s ease-out infinite;
-  transform-origin: 60% 60%;
-}
-body #aboutme .inner .strength p span {
-  font-family: "Lato", sans-serif;
-  letter-spacing: 1.5px;
-  color: #f0f0f0;
-  background-color: #444;
-}
-body #aboutme .inner .strength h4 {
-  font-family: "Lato", sans-serif;
-  letter-spacing: 1.5px;
-  font-weight: 100;
-  color: #444;
-  font-size: 80px;
-  position: absolute;
+body #aboutme .inner .strength .card.is-flipped {
+  transform: rotateX(-180deg);
 }
 body #aboutme .inner .skills {
   width: 1300px;

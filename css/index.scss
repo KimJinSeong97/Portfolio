@@ -208,73 +208,67 @@ body {
                 width: 1300px;
                 display: flex;
                 justify-content: space-between;
-                left: 50%;
-                top: 30%;
-                transform: translate(-50%, 30%);
-                position: absolute;
-                perspective: 200px;
 
-                .positive,
-                .responsible,
-                .communicative {
-                    width: 30%;
+                .scene {
+                    width: 1300px;
+                    height: 130px;
+                    perspective: 600px;
                 }
 
-                h3 {
-                    @include Eng_sub_title;
-                    color: #444;
-                    margin-bottom: 50px;
-                    letter-spacing: -0.5px;
-                    animation: flip_text 1s ease-out infinite;
-                    font-size: 100px;
-                    transform-origin: 60% 60%;
+                .card {
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    transition: transform 1s;
+                    transform-style: preserve-3d;
                 }
 
-                @keyframes flip_text {
-                    0% {
-                        transform: rotateX(0deg);
-
-                    }
-
-                    100% {
-                        transform: rotateX(90deg)
-                    }
-                }
-
-                @keyframes flip_text2 {
-                    0% {
-                        transform: rotateX(90deg);
-                    }
-
-                    100% {
-                        transform: rotateX(360deg);
-                    }
-                }
-
-                p {
-                    @include Kor_font;
-                    font-weight: 200;
-                    color: #444;
-                    font-size: 18px;
-                    line-height: 150%;
-                    letter-spacing: 0.5px;
-                    animation: flip_text2 5s ease-out infinite;
-                    transform-origin: 60% 60%;
-
-                    span {
-                        @include Eng_sub_title;
-                        color: #f0f0f0;
-                        background-color: #444;
-                    }
-                }
-
-                h4 {
-                    @include Eng_sub_title;
-                    font-weight: 100;
-                    color: #444;
-                    font-size: 80px;
+                .card__face {
                     position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    backface-visibility: hidden;
+                    color: #000;
+                    text-align: center;
+                    font-size: 2em;
+                    line-height: 130px;
+
+                    &--back {
+                        transform: rotateX(180deg);
+                    }
                 }
+
+                .card.is-flipped {
+                    transform: rotateX(-180deg);
+                }
+
+                // .positive,
+                // .responsible,
+                // .communicative {
+                //     width: 30%;
+                // }
+
+                // h3 {
+                //     @include Eng_sub_title;
+                //     color: #444;
+                //     margin-bottom: 50px;
+                //     letter-spacing: -0.5px;
+                // }
+
+                // p {
+                //     @include Kor_font;
+                //     font-weight: 200;
+                //     color: #444;
+                //     font-size: 18px;
+                //     line-height: 150%;
+                //     letter-spacing: 0.5px;
+
+                //     span {
+                //         @include Eng_sub_title;
+                //         color: #f0f0f0;
+                //         background-color: #444;
+                //     }
+                // }
             }
 
             .skills {

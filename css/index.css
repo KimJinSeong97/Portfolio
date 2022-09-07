@@ -72,8 +72,11 @@ body #intro .bottom_box2 header {
   position: absolute;
   left: 5%;
 }
-body #intro .bottom_box2 header .logo img {
-  width: 40%;
+body #intro .bottom_box2 header .logo button {
+  border: none;
+}
+body #intro .bottom_box2 header .logo button img {
+  width: 100%;
   cursor: pointer;
 }
 body #intro .bottom_box2 header nav ul {
@@ -92,7 +95,7 @@ body #intro .bottom_box2 header nav ul li a {
 body #intro .bottom_box2 header nav ul li a::after {
   content: "";
   display: block;
-  border-bottom: 2px solid #aaa;
+  border-bottom: 1px solid #aaa;
   padding-bottom: 3px;
   transform: scaleX(0);
   transition: 0.3s ease-out;
@@ -155,8 +158,9 @@ body #intro .bottom_box2 .introduce .introduce_btm p {
   position: absolute;
   color: #000;
   left: 16%;
-  bottom: 17.5%;
+  bottom: 15%;
   width: 25%;
+  line-height: 36px;
   word-break: keep-all;
 }
 body #intro .bottom_box2 .introduce .introduce_btm p > span {
@@ -241,6 +245,8 @@ body #aboutme .inner .flip_text_change .flip {
   transform-style: preserve-3d;
   margin-top: 40px;
   margin-bottom: 40px;
+  transform: translateY(100px);
+  opacity: 0;
 }
 body #aboutme .inner .flip_text_change .flip_face {
   position: absolute;
@@ -424,6 +430,35 @@ body #project .inner .applemusic img {
   cursor: pointer;
   display: block;
   position: inherit;
+  transition: all 0.5s;
+}
+body #project .inner .shure .languege,
+body #project .inner .millie .languege,
+body #project .inner .applemusic .languege {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+body #project .inner .shure .languege a,
+body #project .inner .millie .languege a,
+body #project .inner .applemusic .languege a {
+  font-family: "Playfair Display", serif;
+  font-weight: 100;
+  letter-spacing: 1.5px;
+  padding: 12px;
+  margin: 10px;
+  border: 1px solid #f0f0f0;
+  color: #f0f0f0;
+}
+body #project .inner .shure iframe,
+body #project .inner .millie iframe,
+body #project .inner .applemusic iframe {
+  position: absolute;
+  right: -73.5%;
+  border: 1px solid #fff;
+  display: none;
 }
 body #project .inner .shure .information,
 body #project .inner .millie .information,
@@ -449,7 +484,8 @@ body #project .inner .applemusic .information .link {
 body #project .inner .shure .information .link a,
 body #project .inner .millie .information .link a,
 body #project .inner .applemusic .information .link a {
-  font-family: "Lato", sans-serif;
+  font-family: "Playfair Display", serif;
+  font-weight: 100;
   letter-spacing: 1.5px;
   padding: 12px;
   border: 1px solid #fff;
@@ -465,6 +501,13 @@ body #project .inner .shure .information .skill span,
 body #project .inner .millie .information .skill span,
 body #project .inner .applemusic .information .skill span {
   margin-right: 12px;
+}
+body #project .inner .shure > iframe {
+  top: 20.7%;
+}
+body #project .inner .millie > iframe,
+body #project .inner .applemusic > iframe {
+  top: 21.3%;
 }
 body #project .inner .talesweaver,
 body #project .inner .baskinrobbins {
@@ -526,6 +569,34 @@ body #project .inner .baskinrobbins img {
   cursor: pointer;
   display: block;
   position: inherit;
+  transition: all 0.5s;
+}
+body #project .inner .talesweaver img:hover,
+body #project .inner .baskinrobbins img:hover {
+  filter: blur(3px) grayscale(1);
+}
+body #project .inner .talesweaver .languege,
+body #project .inner .baskinrobbins .languege {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body #project .inner .talesweaver .languege a,
+body #project .inner .baskinrobbins .languege a {
+  font-family: "Playfair Display", serif;
+  font-weight: 100;
+  letter-spacing: 1.5px;
+  padding: 12px;
+  margin: 10px;
+  border: 1px solid #fff;
+}
+body #project .inner .talesweaver iframe,
+body #project .inner .baskinrobbins iframe {
+  position: absolute;
+  top: 20.7%;
+  left: -73.5%;
+  border: 1px solid #fff;
 }
 body #project .inner .talesweaver .information,
 body #project .inner .baskinrobbins .information {

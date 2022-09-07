@@ -24,7 +24,15 @@ gsap.to(".img_animation1", 1, { scrollTrigger: "img_animation1", width: 100 + '%
 gsap.to(".img_animation2", 1.5, { scrollTrigger: "img_animation2", width: 100 + '%', ease: 'expo.inOut' }, 1);
 gsap.fromTo(".my_img1", 2.5, { scrollTrigger: ".my_img1", x: -750 }, { scrollTrigger: ".my_img1", x: 0, ease: 'expo.inOut' }, 2);
 gsap.fromTo(".introduce_btm h5", 1.5, { scrollTrigger: ".introduce_btm h5", y: 25, opacity: 0 }, { scrollTrigger: ".introduce_btm h5", y: 0, opacity: 1 }, 3);
-gsap.fromTo(".introduce_btm p", 1.5, { scrollTrigger: ".introduce_btm p", y: 75, opacity: 0 }, { scrollTrigger: ".introduce_btm p", y: 0, opacity: 1 }, 4);
+gsap.fromTo(".introduce_btm p", 1.5, { scrollTrigger: ".introduce_btm p", y: 50, opacity: 0 }, { scrollTrigger: ".introduce_btm p", y: 0, opacity: 1 }, 4);
+gsap.to('.flip:nth-of-type(1)', 0.5, { scrollTrigger: ".flip:nth-of-type(2)", y: 0, opacity: 1, ease: "expo.inOut" })
+gsap.to('.flip:nth-of-type(2)', 0.5, { scrollTrigger: ".flip:nth-of-type(3)", y: 0, opacity: 1, ease: "expo.inOut" })
+gsap.to('.flip:nth-of-type(3)', 0.5, { scrollTrigger: ".flip:nth-of-type(4)", y: 0, opacity: 1, ease: "expo.inOut" })
+gsap.to('.flip:nth-of-type(4)', 0.5, { scrollTrigger: ".flip:nth-of-type(5)", y: 0, opacity: 1, ease: "expo.inOut" })
+gsap.to('.flip:nth-of-type(5)', 0.5, { scrollTrigger: ".flip:nth-of-type(6)", y: 0, opacity: 1, ease: "expo.inOut" })
+gsap.to('.flip:nth-of-type(6)', 0.5, { scrollTrigger: ".flip:nth-of-type(7)", y: 0, opacity: 1, ease: "expo.inOut" })
+gsap.to('.flip:nth-of-type(7)', 0.5, { scrollTrigger: ".flip:nth-of-type(8)", y: 0, opacity: 1, ease: "expo.inOut" })
+gsap.to('.flip:nth-of-type(8)', 0.5, { scrollTrigger: ".skills>img", y: 0, opacity: 1, ease: "expo.inOut" })
 
 //인트로 스크롤시 글씨 좌,우로 움직임
 window.addEventListener('scroll', function () {
@@ -97,7 +105,7 @@ $(window).scroll(function () {
     var scroll_project = $('#project .inner').offset().top;
     var scroll_contact = $('#contact .inner').offset().top;
 
-    //각 제목 글씨 언더라인 생성 
+    //각 세션별 제목 글씨 언더라인 생성 
     $('.intro_underline1, .intro_underline2').css('width', 1300);
 
     if (scrollTop > scroll_aboutme - 600) {
@@ -126,4 +134,15 @@ $(window).scroll(function () {
     if (scrollTop > scroll_project + 3800) {
         $('.applemusic').css('transform', 'translate(0px)').css({ opacity: 1 });
     }
+})
+
+var project_thumbnail1 = document.querySelector('.shure img');
+
+project_thumbnail1.addEventListener('mouseover', function () {
+    this.style.filter = 'blur(3px) grayscale(1)';
+    document.querySelector('.shure .languege').style.display = 'block';
+})
+
+project_thumbnail1.addEventListener('mouseout', function () {
+    this.style.filter = 'none';
 })

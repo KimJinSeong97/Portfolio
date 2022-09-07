@@ -80,9 +80,13 @@ body {
                 left: 5%;
 
                 .logo {
-                    img {
-                        width: 40%;
-                        cursor: pointer;
+                    button {
+                        border: none;
+
+                        img {
+                            width: 100%;
+                            cursor: pointer;
+                        }
                     }
                 }
 
@@ -103,7 +107,7 @@ body {
                             a::after {
                                 content: '';
                                 display: block;
-                                border-bottom: 2px solid #aaa;
+                                border-bottom: 1px solid #aaa;
                                 padding-bottom: 3px;
                                 transform: scaleX(0);
                                 transition: .3s ease-out;
@@ -118,20 +122,6 @@ body {
             }
 
             .introduce {
-
-                // .introduce_top {
-                //     width: 1300px;
-                //     margin: 0 auto;
-                //     display: flex;
-                //     justify-content: space-between;
-                //     padding-top: 250px;
-
-                //     p {
-                //         width: 27.5%;
-                //         color: #000;
-                //         word-break: keep-all;
-                //     }
-                // }
 
                 .introduce_center {
                     h3 {
@@ -191,8 +181,9 @@ body {
                         position: absolute;
                         color: #000;
                         left: 16%;
-                        bottom: 17.5%;
+                        bottom: 15%;
                         width: 25%;
+                        line-height: 36px;
                         word-break: keep-all;
 
                         >span {
@@ -291,6 +282,8 @@ body {
                     transform-style: preserve-3d;
                     margin-top: 40px;
                     margin-bottom: 40px;
+                    transform: translateY(100px);
+                    opacity: 0;
                 }
 
                 .flip_face {
@@ -475,6 +468,30 @@ body {
                     cursor: pointer;
                     display: block;
                     position: inherit;
+                    transition: all .5s;
+                }
+
+                .languege {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    display: none;
+
+                    a {
+                        @include Eng_title;
+                        padding: 12px;
+                        margin: 10px;
+                        border: 1px solid #f0f0f0;
+                        color: #f0f0f0;
+                    }
+                }
+
+                iframe {
+                    position: absolute;
+                    right: -73.5%;
+                    border: 1px solid #fff;
+                    display: none;
                 }
 
                 .information {
@@ -493,7 +510,7 @@ body {
                         margin-bottom: 30px;
 
                         a {
-                            @include Eng_sub_title;
+                            @include Eng_title;
                             padding: 12px;
                             border: 1px solid #fff;
                         }
@@ -508,6 +525,15 @@ body {
                         }
                     }
                 }
+            }
+
+            .shure>iframe {
+                top: 20.7%;
+            }
+
+            .millie>iframe,
+            .applemusic>iframe {
+                top: 21.3%;
             }
 
             .talesweaver,
@@ -565,6 +591,32 @@ body {
                     cursor: pointer;
                     display: block;
                     position: inherit;
+                    transition: all .5s;
+                }
+
+                img:hover {
+                    filter: blur(3px) grayscale(1);
+                }
+
+                .languege {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    a {
+                        @include Eng_title;
+                        padding: 12px;
+                        margin: 10px;
+                        border: 1px solid #fff;
+                    }
+                }
+
+                iframe {
+                    position: absolute;
+                    top: 20.7%;
+                    left: -73.5%;
+                    border: 1px solid #fff;
                 }
 
                 .information {

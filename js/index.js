@@ -7,13 +7,13 @@ var intro = gsap.timeline({
 });
 
 intro.fromTo('#intro h2', 1, { y: 50, opacity: 0 }, { y: 0, opacity: 1 }, 0);
-intro.fromTo('.left_box', 1.25, { x: -200 + 'vw' }, { x: 0 + 'vw', width: 50 + 'vw', ease: 'power3.out' }, 0.5);
-intro.fromTo('.right_box', 1.25, { x: 200 + 'vw' }, { x: 0 + 'vw', width: 50 + 'vw', ease: 'power3.out' }, 0.5);
+intro.fromTo('.left_slide', 1.25, { x: -200 + 'vw' }, { x: 0 + 'vw', width: 50 + 'vw', ease: 'power3.out' }, 0.5);
+intro.fromTo('.right_slide', 1.25, { x: 200 + 'vw' }, { x: 0 + 'vw', width: 50 + 'vw', ease: 'power3.out' }, 0.5);
 intro.fromTo('#intro h2', 2, { color: 'black' }, { color: 'white', ease: 'power0.out' }, 0.5);
 intro.to('#intro h2', 1, { color: 'black', ease: 'power0.out' }, 1.75);
-intro.fromTo('.bottom_box', 1.25, { y: 0 + 'vh' }, { y: 0 + 'vh', height: 150 + 'vh', ease: 'expo.out' }, 1.75);
+intro.fromTo('.bottom_slide', 1.25, { y: 0 + 'vh' }, { y: 0 + 'vh', height: 150 + 'vh', ease: 'expo.out' }, 1.75);
 intro.fromTo('#intro h2', 1, { y: 0, opacity: 1 }, { y: -50, opacity: 0 }, 2.5);
-intro.fromTo('.bottom_box2', 1.25, { y: 0 + 'vh' }, { y: 0 + 'vh', height: 150 + 'vh', ease: 'expo.out' }, 3.5);
+intro.fromTo('.bottom_slide2', 1.25, { y: 0 + 'vh' }, { y: 0 + 'vh', height: 150 + 'vh', ease: 'expo.out' }, 3.5);
 intro.fromTo('header', 0.5, { y: 25, opacity: 0 }, { y: 0, opacity: 1 }, 4);
 intro.fromTo('.introduce h3', 0.5, { y: 20, opacity: 0 }, { y: 0, opacity: 1 }, 4.5);
 intro.fromTo('.introduce h4', 0.5, { y: 20, opacity: 0 }, { y: 0, opacity: 1 }, 5);
@@ -32,7 +32,7 @@ gsap.to('.flip:nth-of-type(4)', 0.5, { scrollTrigger: ".flip:nth-of-type(5)", y:
 gsap.to('.flip:nth-of-type(5)', 0.5, { scrollTrigger: ".flip:nth-of-type(6)", y: 0, opacity: 1, ease: "expo.inOut" })
 gsap.to('.flip:nth-of-type(6)', 0.5, { scrollTrigger: ".flip:nth-of-type(7)", y: 0, opacity: 1, ease: "expo.inOut" })
 gsap.to('.flip:nth-of-type(7)', 0.5, { scrollTrigger: ".flip:nth-of-type(8)", y: 0, opacity: 1, ease: "expo.inOut" })
-gsap.to('.flip:nth-of-type(8)', 0.5, { scrollTrigger: ".skills>img", y: 0, opacity: 1, ease: "expo.inOut" })
+gsap.to('.flip:nth-of-type(8)', 0.5, { scrollTrigger: ".flip:nth-of-type(8)", y: 0, opacity: 1, ease: "expo.inOut" })
 
 //인트로 스크롤시 글씨 좌,우로 움직임
 window.addEventListener('scroll', function () {
@@ -65,38 +65,6 @@ for (var i = 0; i < flip.length; i++) {
         this.style.transform = 'rotateX(0deg)'
     })
 }
-
-//Skill 마우스오버하면 이미지, 내용 바뀜
-// $(function () {
-//     $('.html').mouseover(function () {
-//         $('.skill_icon img').attr('src', 'img/html.png')
-//         $('.skill_icon p').html('<p>웹 표준과 웹 접근성을 지킵니다.</p>')
-//         $(this).addClass('bold_font')
-//         $('.css, .js, .photoshop').removeClass('bold_font')
-//         $('.skill_icon').css('transform', 'translate(0px)').css({ opacity: 1 })
-//     });
-//     $('.css').mouseover(function () {
-//         $('.skill_icon img').attr('src', 'img/sass.png')
-//         $('.skill_icon p').html('<p>미디어 퀴리로 반응형 웹페이지를<br>제작할 수 있습니다.<br>SCSS 문법을 사용합니다.<br>주로 Nesting, Mixin을 사용합니다.</p>')
-//         $(this).addClass('bold_font')
-//         $('.html, .js, .photoshop').removeClass('bold_font')
-//         $('.skill_icon').css('transform', 'translate(0px)').css({ opacity: 1 })
-//     });
-//     $('.js').mouseover(function () {
-//         $('.skill_icon img').attr('src', 'img/js.png')
-//         $('.skill_icon p').html('<p>JS와 jQuery를 이용해 캐러셀을 제작할 수 있습니다.<br>jQuery로 상호작용(네비게이션, 탭 메뉴,<br>모달창, 아코디언)을 제작할 수 있습니다.</p>')
-//         $(this).addClass('bold_font')
-//         $('.html, .css, .photoshop').removeClass('bold_font')
-//         $('.skill_icon').css('transform', 'translate(0px)').css({ opacity: 1 })
-//     });
-//     $('.photoshop').mouseover(function () {
-//         $('.skill_icon img').attr('src', 'img/photoshop.png')
-//         $('.skill_icon p').html('<p>포토샵으로 이미지를 자유롭게 편집할 수 있습니다.</p>')
-//         $(this).addClass('bold_font')
-//         $('.css, .js, .html').removeClass('bold_font')
-//         $('.skill_icon').css('transform', 'translate(0px)').css({ opacity: 1 })
-//     });
-// })
 
 $(window).scroll(function () {
     var scrollTop = $(this).scrollTop();
@@ -136,13 +104,44 @@ $(window).scroll(function () {
     }
 })
 
-var project_thumbnail1 = document.querySelector('.shure img');
+$(function () {
+    //슈어 썸네일 호버, 클릭 시 소스 코드 보기.
+    $('.shure_thumbnail').mouseover(function () {
+        $('.shure>img').css('filter', 'blur(3px)');
+        $('.shure .languege').css('display', 'block');
+    })
+    $('.shure .languege .html_btn').click(function () {
+        $('.shure .html_code').css('display', 'block');
+        $('.shure .css_code, .shure .js_code').css('display', 'none');
+    })
+    $('.shure .languege .css_btn').click(function () {
+        $('.shure .css_code').css('display', 'block');
+        $('.shure .html_code, .shure .js_code').css('display', 'none');
+    })
+    $('.shure .languege .js_btn').click(function () {
+        $('.shure .js_code').css('display', 'block');
+        $('.shure .html_code, .shure .css_code').css('display', 'none');
+    })
+    $('.shure_thumbnail').mouseout(function () {
+        $('.shure>img').css('filter', 'none')
+        $('.shure .languege').css('display', 'none');
+    })
 
-project_thumbnail1.addEventListener('mouseover', function () {
-    this.style.filter = 'blur(3px) grayscale(1)';
-    document.querySelector('.shure .languege').style.display = 'block';
-})
-
-project_thumbnail1.addEventListener('mouseout', function () {
-    this.style.filter = 'none';
+    //테일즈위버 썸네일 호버, 클릭 시 소스 코드 보기.
+    $('.talesweaver_thumbnail').mouseover(function () {
+        $('.talesweaver>img').css('filter', 'blur(3px)');
+        $('.talesweaver .languege').css('display', 'block');
+    })
+    $('.talesweaver .languege .html_btn').click(function () {
+        $('.talesweaver .html_code').css('display', 'block');
+        $('.talesweaver .css_code').css('display', 'none');
+    })
+    $('.talesweaver .languege .css_btn').click(function () {
+        $('.talesweaver .html_code').css('display', 'none');
+        $('.talesweaver .css_code').css('display', 'block');
+    })
+    $('.talesweaver_thumbnail').mouseout(function () {
+        $('.talesweaver>img').css('filter', 'none')
+        $('.talesweaver .languege').css('display', 'none');
+    })
 })

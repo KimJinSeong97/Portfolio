@@ -23,16 +23,8 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.to(".img_animation1", 1, { scrollTrigger: "img_animation1", width: 100 + '%', ease: 'expo.inOut' }, 0.5);
 gsap.to(".img_animation2", 1.5, { scrollTrigger: "img_animation2", width: 100 + '%', ease: 'expo.inOut' }, 1);
 gsap.fromTo(".my_img", 2.5, { scrollTrigger: ".my_img", x: -751 }, { scrollTrigger: ".my_img", x: 0, ease: 'expo.inOut' }, 2);
-gsap.fromTo(".introduce_btm h5", 1.5, { scrollTrigger: ".introduce_btm h5", y: 25, opacity: 0 }, { scrollTrigger: ".introduce_btm h5", y: 0, opacity: 1 }, 3);
-gsap.fromTo(".introduce_btm p", 1.5, { scrollTrigger: ".introduce_btm p", y: 50, opacity: 0 }, { scrollTrigger: ".introduce_btm p", y: 0, opacity: 1 }, 4);
-// gsap.to('.flip:nth-of-type(1)', 0.5, { scrollTrigger: ".flip:nth-of-type(2)", y: 0, opacity: 1, ease: "expo.inOut" })
-// gsap.to('.flip:nth-of-type(2)', 0.5, { scrollTrigger: ".flip:nth-of-type(3)", y: 0, opacity: 1, ease: "expo.inOut" })
-// gsap.to('.flip:nth-of-type(3)', 0.5, { scrollTrigger: ".flip:nth-of-type(4)", y: 0, opacity: 1, ease: "expo.inOut" })
-// gsap.to('.flip:nth-of-type(4)', 0.5, { scrollTrigger: ".flip:nth-of-type(5)", y: 0, opacity: 1, ease: "expo.inOut" })
-// gsap.to('.flip:nth-of-type(5)', 0.5, { scrollTrigger: ".flip:nth-of-type(6)", y: 0, opacity: 1, ease: "expo.inOut" })
-// gsap.to('.flip:nth-of-type(6)', 0.5, { scrollTrigger: ".flip:nth-of-type(7)", y: 0, opacity: 1, ease: "expo.inOut" })
-// gsap.to('.flip:nth-of-type(7)', 0.5, { scrollTrigger: ".flip:nth-of-type(8)", y: 0, opacity: 1, ease: "expo.inOut" })
-// gsap.to('.flip:nth-of-type(8)', 0.5, { scrollTrigger: ".flip:nth-of-type(8)", y: 0, opacity: 1, ease: "expo.inOut" })
+gsap.fromTo(".introduce_btm h5", 1, { scrollTrigger: ".introduce_btm h5", y: 25, opacity: 0 }, { scrollTrigger: ".introduce_btm h5", y: 0, opacity: 1 }, 3);
+gsap.fromTo(".introduce_btm p", 1, { scrollTrigger: ".introduce_btm p", y: 50, opacity: 0 }, { scrollTrigger: ".introduce_btm p", y: 0, opacity: 1 }, 4);
 
 //인트로 스크롤시 글씨 좌,우로 움직임
 window.addEventListener('scroll', function () {
@@ -49,9 +41,9 @@ window.addEventListener('scroll', function () {
     let project = document.querySelector('#project h2');
     let contact = document.querySelector('#contact h2');
 
-    aboutme.style.marginLeft = (scroll_value * 0.85) + 'px';
-    project.style.marginLeft = ((scroll_value - 2000) * 0.85) + 'px';
-    contact.style.marginLeft = ((scroll_value - 7000) * 0.65) + 'px';
+    aboutme.style.marginLeft = (scroll_value * 0.9) + 'px';
+    project.style.marginLeft = ((scroll_value - 2000) * 0.9) + 'px';
+    contact.style.marginLeft = ((scroll_value - 7000) * 0.7) + 'px';
 })
 
 //aboutme my strength 폰트 뒤집기

@@ -367,7 +367,7 @@ body {
         background-color: #000;
         padding-bottom: 450px;
 
-        .blur_grayscale{
+        .blur_grayscale {
             filter: blur(3px), grayscale(100%);
         }
 
@@ -705,7 +705,6 @@ body {
 
         .inner {
             width: 1300px;
-            height: 1200px;
             margin: 0 auto;
             position: relative;
 
@@ -727,6 +726,62 @@ body {
                 background-color: #aaa;
                 transition: all 1s ease-in-out;
                 margin-bottom: 300px;
+            }
+
+            h3 {
+                font-size: 72px;
+                color: #444;
+                @include Eng_sub_title;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: -1px;
+                text-align: center;
+                margin-bottom: 200px;
+            }
+
+            .contact_list {
+                width: 1300px;
+                height: 45px;
+                font-size: 24px;
+                color: #444;
+                @include Eng_sub_title;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: -1px;
+                margin-bottom: 50px;
+                display: flex;
+                justify-content: space-between;
+                text-align: right;
+                border-bottom: 1px solid #444;
+
+                span {
+                    color: #444;
+                }
+
+                .num {
+                    width: 100px;
+                    text-align: left;
+                }
+
+                .type {
+                    width: 300px;
+                    text-align: left;
+                }
+
+                .name {
+                    width: 500px;
+
+                    a {
+                        color: #444;
+                    }
+                }
+            }
+
+            h4 {
+                font-size: 14px;
+                color: #C21010;
+                margin-bottom: 25px;
+                text-align: right;
             }
         }
     }

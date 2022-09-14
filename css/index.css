@@ -721,7 +721,6 @@ body #project .inner .baskinrobbins > .code {
 }
 body #contact .inner {
   width: 1300px;
-  height: 1200px;
   margin: 0 auto;
   position: relative;
 }
@@ -743,4 +742,54 @@ body #contact .inner .contact_underline {
   background-color: #aaa;
   transition: all 1s ease-in-out;
   margin-bottom: 300px;
+}
+body #contact .inner h3 {
+  font-size: 72px;
+  color: #444;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  text-align: center;
+  margin-bottom: 200px;
+}
+body #contact .inner .contact_list {
+  width: 1300px;
+  height: 45px;
+  font-size: 24px;
+  color: #444;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+  border-bottom: 1px solid #444;
+}
+body #contact .inner .contact_list span {
+  color: #444;
+}
+body #contact .inner .contact_list .num {
+  width: 100px;
+  text-align: left;
+}
+body #contact .inner .contact_list .type {
+  width: 300px;
+  text-align: left;
+}
+body #contact .inner .contact_list .name {
+  width: 500px;
+}
+body #contact .inner .contact_list .name a {
+  color: #444;
+}
+body #contact .inner h4 {
+  font-size: 14px;
+  color: #C21010;
+  margin-bottom: 25px;
+  text-align: right;
 }

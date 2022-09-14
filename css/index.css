@@ -192,7 +192,7 @@ body #intro .bottom_slide2 .introduce .introduce_btm .img_animation2 {
   background-color: #393E46;
   right: 0%;
 }
-body #intro .bottom_slide2 .introduce .introduce_btm .my_img1 {
+body #intro .bottom_slide2 .introduce .introduce_btm .my_img {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -245,8 +245,6 @@ body #aboutme .inner .flip_text_strength .flip {
   transform-style: preserve-3d;
   margin-top: 40px;
   margin-bottom: 40px;
-  transform: translateY(100px);
-  opacity: 0;
 }
 body #aboutme .inner .flip_text_strength .flip_face {
   position: absolute;
@@ -296,8 +294,6 @@ body #aboutme .inner .flip_text_skill .flip {
   transition: transform 0.5s;
   transform-style: preserve-3d;
   margin-top: 80px;
-  transform: translateY(100px);
-  opacity: 0;
 }
 body #aboutme .inner .flip_text_skill .flip_face {
   position: absolute;
@@ -327,6 +323,9 @@ body #aboutme .inner .flip_text_skill .flip_face_kor {
 body #project {
   background-color: #000;
   padding-bottom: 450px;
+}
+body #project .blur_grayscale {
+  filter: blur(3px), grayscale(100%);
 }
 body #project .inner {
   width: 1300px;
@@ -427,16 +426,28 @@ body #project .inner .applemusic > img {
   transition: all 0.25s;
 }
 body #project .inner .shure .shure_thumbnail,
+body #project .inner .shure .millie_thumbnail,
+body #project .inner .shure .applemusic_thumbnail,
 body #project .inner .millie .shure_thumbnail,
-body #project .inner .applemusic .shure_thumbnail {
+body #project .inner .millie .millie_thumbnail,
+body #project .inner .millie .applemusic_thumbnail,
+body #project .inner .applemusic .shure_thumbnail,
+body #project .inner .applemusic .millie_thumbnail,
+body #project .inner .applemusic .applemusic_thumbnail {
   width: 750px;
   height: 450px;
   position: absolute;
   top: 20.7%;
 }
 body #project .inner .shure .shure_thumbnail .languege,
+body #project .inner .shure .millie_thumbnail .languege,
+body #project .inner .shure .applemusic_thumbnail .languege,
 body #project .inner .millie .shure_thumbnail .languege,
-body #project .inner .applemusic .shure_thumbnail .languege {
+body #project .inner .millie .millie_thumbnail .languege,
+body #project .inner .millie .applemusic_thumbnail .languege,
+body #project .inner .applemusic .shure_thumbnail .languege,
+body #project .inner .applemusic .millie_thumbnail .languege,
+body #project .inner .applemusic .applemusic_thumbnail .languege {
   position: absolute;
   top: 35%;
   left: 50%;
@@ -444,8 +455,14 @@ body #project .inner .applemusic .shure_thumbnail .languege {
   display: none;
 }
 body #project .inner .shure .shure_thumbnail .languege p,
+body #project .inner .shure .millie_thumbnail .languege p,
+body #project .inner .shure .applemusic_thumbnail .languege p,
 body #project .inner .millie .shure_thumbnail .languege p,
-body #project .inner .applemusic .shure_thumbnail .languege p {
+body #project .inner .millie .millie_thumbnail .languege p,
+body #project .inner .millie .applemusic_thumbnail .languege p,
+body #project .inner .applemusic .shure_thumbnail .languege p,
+body #project .inner .applemusic .millie_thumbnail .languege p,
+body #project .inner .applemusic .applemusic_thumbnail .languege p {
   font-family: "Playfair Display", serif;
   font-weight: 100;
   letter-spacing: 1.5px;
@@ -455,8 +472,14 @@ body #project .inner .applemusic .shure_thumbnail .languege p {
   color: #f0f0f0;
 }
 body #project .inner .shure .shure_thumbnail .languege > div,
+body #project .inner .shure .millie_thumbnail .languege > div,
+body #project .inner .shure .applemusic_thumbnail .languege > div,
 body #project .inner .millie .shure_thumbnail .languege > div,
-body #project .inner .applemusic .shure_thumbnail .languege > div {
+body #project .inner .millie .millie_thumbnail .languege > div,
+body #project .inner .millie .applemusic_thumbnail .languege > div,
+body #project .inner .applemusic .shure_thumbnail .languege > div,
+body #project .inner .applemusic .millie_thumbnail .languege > div,
+body #project .inner .applemusic .applemusic_thumbnail .languege > div {
   font-family: "Playfair Display", serif;
   font-weight: 100;
   letter-spacing: 1.5px;
@@ -477,6 +500,7 @@ body #project .inner .applemusic .code {
   height: 448px;
   overflow-y: scroll;
   display: none;
+  background-color: #1e1e1e;
 }
 body #project .inner .shure .code img,
 body #project .inner .millie .code img,
@@ -527,11 +551,11 @@ body #project .inner .applemusic .information .skill span {
   margin-right: 12px;
 }
 body #project .inner .shure > .code {
-  top: 20.7%;
+  top: 20.6%;
 }
 body #project .inner .millie > .code,
 body #project .inner .applemusic > .code {
-  top: 21.3%;
+  top: 21.1%;
 }
 body #project .inner .talesweaver,
 body #project .inner .baskinrobbins {
@@ -596,14 +620,18 @@ body #project .inner .baskinrobbins > img {
   transition: all 0.5s;
 }
 body #project .inner .talesweaver .talesweaver_thumbnail,
-body #project .inner .baskinrobbins .talesweaver_thumbnail {
+body #project .inner .talesweaver .baskinrobbins_thumbnail,
+body #project .inner .baskinrobbins .talesweaver_thumbnail,
+body #project .inner .baskinrobbins .baskinrobbins_thumbnail {
   width: 750px;
   height: 450px;
   position: absolute;
   top: 20.7%;
 }
 body #project .inner .talesweaver .talesweaver_thumbnail .languege,
-body #project .inner .baskinrobbins .talesweaver_thumbnail .languege {
+body #project .inner .talesweaver .baskinrobbins_thumbnail .languege,
+body #project .inner .baskinrobbins .talesweaver_thumbnail .languege,
+body #project .inner .baskinrobbins .baskinrobbins_thumbnail .languege {
   position: absolute;
   top: 35%;
   left: 50%;
@@ -611,7 +639,9 @@ body #project .inner .baskinrobbins .talesweaver_thumbnail .languege {
   display: none;
 }
 body #project .inner .talesweaver .talesweaver_thumbnail .languege p,
-body #project .inner .baskinrobbins .talesweaver_thumbnail .languege p {
+body #project .inner .talesweaver .baskinrobbins_thumbnail .languege p,
+body #project .inner .baskinrobbins .talesweaver_thumbnail .languege p,
+body #project .inner .baskinrobbins .baskinrobbins_thumbnail .languege p {
   font-family: "Playfair Display", serif;
   font-weight: 100;
   letter-spacing: 1.5px;
@@ -621,7 +651,9 @@ body #project .inner .baskinrobbins .talesweaver_thumbnail .languege p {
   color: #f0f0f0;
 }
 body #project .inner .talesweaver .talesweaver_thumbnail .languege > div,
-body #project .inner .baskinrobbins .talesweaver_thumbnail .languege > div {
+body #project .inner .talesweaver .baskinrobbins_thumbnail .languege > div,
+body #project .inner .baskinrobbins .talesweaver_thumbnail .languege > div,
+body #project .inner .baskinrobbins .baskinrobbins_thumbnail .languege > div {
   font-family: "Playfair Display", serif;
   font-weight: 100;
   letter-spacing: 1.5px;
@@ -641,6 +673,7 @@ body #project .inner .baskinrobbins .code {
   height: 448px;
   overflow-y: scroll;
   display: none;
+  background-color: #1e1e1e;
 }
 body #project .inner .talesweaver .code img,
 body #project .inner .baskinrobbins .code img {

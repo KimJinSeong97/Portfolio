@@ -221,7 +221,7 @@ body {
                         right: 0%;
                     }
 
-                    .my_img1 {
+                    .my_img {
                         width: 100%;
                         height: 100%;
                         position: absolute;
@@ -282,8 +282,6 @@ body {
                     transform-style: preserve-3d;
                     margin-top: 40px;
                     margin-bottom: 40px;
-                    transform: translateY(100px);
-                    opacity: 0;
                 }
 
                 .flip_face {
@@ -335,8 +333,6 @@ body {
                     transition: transform .5s;
                     transform-style: preserve-3d;
                     margin-top: 80px;
-                    transform: translateY(100px);
-                    opacity: 0;
                 }
 
                 .flip_face {
@@ -370,6 +366,10 @@ body {
     #project {
         background-color: #000;
         padding-bottom: 450px;
+
+        .blur_grayscale{
+            filter: blur(3px), grayscale(100%);
+        }
 
         .inner {
             width: 1300px;
@@ -460,7 +460,9 @@ body {
                     transition: all .25s;
                 }
 
-                .shure_thumbnail {
+                .shure_thumbnail,
+                .millie_thumbnail,
+                .applemusic_thumbnail {
                     width: 750px;
                     height: 450px;
                     position: absolute;
@@ -501,6 +503,7 @@ body {
                     height: 448px;
                     overflow-y: scroll;
                     display: none;
+                    background-color: #1e1e1e;
 
                     img {
                         width: 500px;
@@ -542,12 +545,12 @@ body {
             }
 
             .shure>.code {
-                top: 20.7%;
+                top: 20.6%;
             }
 
             .millie>.code,
             .applemusic>.code {
-                top: 21.3%;
+                top: 21.1%;
             }
 
             .talesweaver,
@@ -608,7 +611,8 @@ body {
                     transition: all .5s;
                 }
 
-                .talesweaver_thumbnail {
+                .talesweaver_thumbnail,
+                .baskinrobbins_thumbnail {
                     width: 750px;
                     height: 450px;
                     position: absolute;
@@ -649,6 +653,7 @@ body {
                     height: 448px;
                     overflow-y: scroll;
                     display: none;
+                    background-color: #1e1e1e;
 
                     img {
                         width: 500px;

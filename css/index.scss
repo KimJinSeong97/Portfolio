@@ -698,6 +698,17 @@ body {
             .baskinrobbins>.code {
                 top: 20.7%;
             }
+
+            .participation{
+                @include Kor_font;
+                width: 1300px;
+                font-size: 20px;
+                color: #fff;
+                position: absolute;
+                bottom: -7.5%;
+                letter-spacing: -1px;
+                text-align: right;
+            }
         }
     }
 

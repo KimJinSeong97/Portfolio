@@ -719,6 +719,17 @@ body #project .inner .talesweaver > .code,
 body #project .inner .baskinrobbins > .code {
   top: 20.7%;
 }
+body #project .inner .participation {
+  font-family: "Gothic A1", sans-serif;
+  letter-spacing: 1.5px;
+  width: 1300px;
+  font-size: 20px;
+  color: #fff;
+  position: absolute;
+  bottom: -7.5%;
+  letter-spacing: -1px;
+  text-align: right;
+}
 body #contact .inner {
   width: 1300px;
   margin: 0 auto;
@@ -788,8 +799,11 @@ body #contact .inner .contact_list .name a {
   color: #444;
 }
 body #contact .inner h4 {
+  font-family: "Gothic A1", sans-serif;
+  letter-spacing: 1.5px;
   font-size: 14px;
   color: #C21010;
   margin-bottom: 25px;
   text-align: right;
+  letter-spacing: -1px;
 }
